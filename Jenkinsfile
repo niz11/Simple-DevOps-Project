@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                echo $sha1
-                echo $ghprbSourceBranch
+                echo 'Building NEW'
             }
         }
         stage('Test') {
