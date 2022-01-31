@@ -5,7 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building 16!!!'
-                echo $ghprbActualCommitAuthor
+                echo 'I am building '+scm.branches[0].name+' branch.'
+                echo ${env.ghprbActualCommitAuthor}
+                // echo ${ghprbActualCommitAuthor}
             }
         }
         stage('Test') {
