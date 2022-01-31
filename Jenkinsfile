@@ -3,6 +3,13 @@ pipeline {
 
     stages {
         stage('Build') {
+            when {
+                not {
+                    anyOf {
+                        environment name: 'ghprbPullTitle', value: null
+                    }
+                 }
+               }
             steps {
                 script {
                     echo 'Building 22!!!'
@@ -13,7 +20,8 @@ pipeline {
                     // echo 'ghprbPullId: ' $ghprbPullId
                     // echo 'ghprbPullLink: ' $ghprbPullLink
                     // echo 'ghprbPullTitle: ' $ghprbPullTitle
-                    echo 'ghprbSourceBranch: ' ${env.ghprbSourceBranch}
+                    TEST=env.getProperty('ghprbPullTitle')
+                    echo TEST
                     // echo 'ghprbTargetBranch: ' $ghprbTargetBranch
                     // echo 'sha1: ' $sha1
                     // echo 'I am building '+scm.branches[0].name+' branch.'
