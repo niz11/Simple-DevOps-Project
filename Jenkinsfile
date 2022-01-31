@@ -7,6 +7,8 @@ pipeline {
                 not {
                     anyOf {
                         environment name: 'ghprbPullTitle', value: null
+                        environment name: 'ghprbActualCommitAuthor', value: null
+                        environment name: 'ghprbSourceBranch', value: null
                     }
                  }
                }
@@ -14,7 +16,8 @@ pipeline {
                 script {
                     echo 'Building 22!!!'
                     // echo 'ghprbActualCommit: ' params.ghprbActualCommitAuthor
-                    // echo 'ghprbActualCommitAuthor: ' $ghprbActualCommitAuthor
+                    echo 'ghprbActualCommitAuthor: ' env.getProperty('ghprbActualCommitAuthor')
+                    echo 'ghprbSourceBranch: ' env.getProperty('ghprbSourceBranch')
                     // echo 'ghprbActualCommitAuthorEmail: ' $ghprbActualCommitAuthorEmail
                     // echo 'ghprbPullDescription: ' $ghprbPullDescription
                     // echo 'ghprbPullId: ' $ghprbPullId
