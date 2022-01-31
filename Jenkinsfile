@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building 16!!!'
+                echo $ghprbActualCommitAuthor
             }
         }
         stage('Test') {
