@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building 26!!!'
-                    echo "new commit 2"
+                    echo "new commit 3"
                     // echo 'ghprbActualCommit: ' params.ghprbActualCommitAuthor
                     TEST2=env.getProperty('ghprbSourceBranch')
                     echo TEST2
