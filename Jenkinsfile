@@ -13,7 +13,7 @@ pipeline {
                }
             steps {
                 script {
-                    echo 'Building 22!!!'
+                    echo 'Building 26!!!'
                     // echo 'ghprbActualCommit: ' params.ghprbActualCommitAuthor
                     TEST2=env.getProperty('ghprbSourceBranch')
                     echo TEST2
@@ -29,6 +29,8 @@ pipeline {
                     // echo 'I am building '+scm.branches[0].name+' branch.'
                     // echo ${env.ghprbActualCommitAuthor}
                     // echo ${ghprbActualCommitAuthor}
+
+                    // Checking if branch exists
                 }
             }
         }
