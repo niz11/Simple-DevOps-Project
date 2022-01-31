@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building 16!!!'
+                echo 'Building 19!!!'
                 echo 'ghprbActualCommit: ' $ghprbActualCommit
                 echo 'ghprbActualCommitAuthor: ' $ghprbActualCommitAuthor
                 echo 'ghprbActualCommitAuthorEmail: ' $ghprbActualCommitAuthorEmail
