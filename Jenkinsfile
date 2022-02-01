@@ -38,7 +38,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'help wanted'
+                echo 'test no label'
             }
             // steps {
             //     script {
