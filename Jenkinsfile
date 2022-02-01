@@ -57,6 +57,7 @@ pipeline {
             //             ])
             //         }
             //      }
+            // Skip test
             // }
         }
         stage('Deploy') {
