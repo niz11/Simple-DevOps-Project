@@ -38,7 +38,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Test 4'
+                echo 'help wanted'
             }
             // steps {
             //     script {
