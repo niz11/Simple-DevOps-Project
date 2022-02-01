@@ -38,7 +38,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'test no label'
+                echo 'Last label check'
             }
             // steps {
             //     script {
