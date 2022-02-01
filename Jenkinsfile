@@ -37,24 +37,25 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                script {
-                    try {
-                        checkout([
-                            $class: 'GitSCM',
-                            branches: [[name: 'aaaaa']],
-                            userRemoteConfigs: [[credentialsId: 'api', url: 'git@github.com:niz11/Simple-DevOps-Project.git']]
-                        ])
-                    }
-                    catch (Exception e) {
-                        checkout([
-                                $class: 'GitSCM',
-                                branches: [[name: 'master']],
-                                userRemoteConfigs: [[url: 'git@github.com:niz11/Simple-DevOps-Project.git']]
-                        ])
-                    }
-                 }
-            }
+            echo 'Test'
+            // steps {
+            //     script {
+            //         try {
+            //             checkout([
+            //                 $class: 'GitSCM',
+            //                 branches: [[name: 'aaaaa']],
+            //                 userRemoteConfigs: [[credentialsId: 'api', url: 'git@github.com:niz11/Simple-DevOps-Project.git']]
+            //             ])
+            //         }
+            //         catch (Exception e) {
+            //             checkout([
+            //                     $class: 'GitSCM',
+            //                     branches: [[name: 'master']],
+            //                     userRemoteConfigs: [[url: 'git@github.com:niz11/Simple-DevOps-Project.git']]
+            //             ])
+            //         }
+            //      }
+            // }
         }
         stage('Deploy') {
             steps {
