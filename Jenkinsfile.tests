@@ -18,7 +18,7 @@ pipeline {
     stage('Run e2e tests') {
       steps {
         script {
-          docker.image(params.cypressImage).inside("--env CYPRESS_HOST=https://qa.formlabs.com--network host --entrypoint='' --user root") {
+          docker.image('cypress/included:8.3.1').inside("--env CYPRESS_HOST=https://qa.formlabs.com--network host --entrypoint='' --user root") {
             echo "In docker"
             sh "cd e2e-cypress && npm ci && cypress run --quiet --browser chrome --spec cypress/integration/formlabs/simple/simple_tests.js  || exit 0 "
             sh "cd e2e-cypress && npm run generateHtml && mv mochawesome-report mochareports && rm -rf cypress/screenshots"
