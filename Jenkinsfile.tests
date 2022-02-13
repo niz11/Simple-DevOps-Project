@@ -32,7 +32,6 @@ pipeline {
   post {
     always {
       catchError {
-        archiveArtifacts artifacts: '**/*.diff.png', fingerprint: true, allowEmptyArchive: true
         junit 'e2e-cypress/cypress/results/*.xml'
       }
       publishHTML target : [
