@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-09T08:08:40.804Z",
+    "end": "2022-02-09T08:08:41.043Z",
+    "duration": 239,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "495ff446-b0a8-4b9c-9953-3415a04bb5a6",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shop/fuse1_packages_spec.js",
+      "file": "cypress/integration/formlabs/shop/fuse1_packages_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "90a4ec6c-fe01-4cfe-a509-f772c15ada26",
+          "title": "Fuse 1 configuration flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Fuse 1 Workflow Essentials Package",
+              "fullTitle": "Fuse 1 configuration flow Test Fuse 1 Workflow Essentials Package",
+              "timedOut": null,
+              "duration": 57,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Step 1: Go with default Fuse 1 Workflow Essentials Package\ncy.get('a[href=\"#/customize/\"]').click(); //Step 2: Customise, Check default selected products and their prices\n//Check Fuse 1 Printer 120V\nvar product = _fuse_1_workflow_essentials_package.default.defaultSelectedProducts;\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 1); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 1); //Check Fuse 1 Powder Cartridge\ncy.checkProductData(4, product[2].id, product[2].name, product[2].price, 1); //Check Fuse 1 Printer Stand\ncy.checkProductData(5, product[3].id, product[3].name, product[3].price, 1); //Check Nylon 12 Powder 6 kg\ncy.checkProductData(6, product[4].id, product[4].name, product[4].price, 3); //Check Fuse Shift 120V\ncy.checkProductData(8, product[5].id, product[5].name, product[5].price, 1); //Step 3:Select Service plan\n//Go with default selected Fuse Shift 120V\ncy.log('Step 3:Select Service plan');\ncy.get('a[href=\"#/service/\"]').click();\nvar servicePlan = _fuse_1_workflow_essentials_package.default.fuseAndShiftPremiumServicePlans; //Check Fuse and Sift Premium Service 1 Year plan\ncy.checkServicePlan(1, servicePlan[0].name, servicePlan[0].price); //Check Fuse and Sift Premium Service 2 Year plan\ncy.checkServicePlan(2, servicePlan[1].name, servicePlan[1].price); //Check Fuse and Sift Premium Service 3 Year plan\ncy.checkServicePlan(3, servicePlan[2].name, servicePlan[2].price); //Step back and deselect Fuse Shift 120V\ncy.get('a[href=\"#/customize/\"]').click({\n  force: true\n});\ncy.get('span[class^=\"ProductOptionControl_title\"]').eq(7).click(); //Test service plans price for only fuse 1 selected\ncy.get('a[href=\"#/service/\"]').click();\nvar fuseServicePlan = _fuse_1_workflow_essentials_package.default.fusePremiumServicePlans;\nvar productCardPosition = 1;\ncy.get(fuseServicePlan).each((item, index) => {\n  cy.checkServicePlan(productCardPosition, fuseServicePlan[index].name, fuseServicePlan[index].price);\n  cy.log(item);\n  productCardPosition++;\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/3d-printers/fuse-1-build-your-own-package/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/3d-printers/fuse-1-build-your-own-package/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/3d-printers/fuse-1-build-your-own-package/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/3d-printers/fuse-1-build-your-own-package/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/shop/fuse1_packages_spec.js:173:6)",
+                "diff": null
+              },
+              "uuid": "d5648a46-484e-4c93-b225-00b7f5c5b465",
+              "parentUUID": "90a4ec6c-fe01-4cfe-a509-f772c15ada26",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Fuse 1 High Efficiency Package",
+              "fullTitle": "Fuse 1 configuration flow Test Fuse 1 High Efficiency Package",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Step 1: Select and go with Fuse 1 High Efficiency Package\ncy.get('span').contains('Fuse 1 High Efficiency Package').click();\ncy.get('a[href=\"#/customize/\"]').click(); //Step 2: Customise, Check default selected products and their prices\n//Check Fuse 1 Printer 120V\nvar product = _fuse_1_high_efficiency_package.default.defaultSelectedProducts;\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 1); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 1); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(3, product[2].id, product[2].name, product[2].price, 1); //Check Fuse 1 Powder Cartridge\ncy.checkProductData(4, product[3].id, product[3].name, product[3].price, 2); //Check Fuse 1 Printer Stand\ncy.checkProductData(5, product[4].id, product[4].name, product[4].price, 1); //Check Nylon 12 Powder 6 kg\ncy.checkProductData(6, product[5].id, product[5].name, product[5].price, 4); //Check Fuse Shift 120V\ncy.checkProductData(8, product[6].id, product[6].name, product[6].price, 1); //Step 3:Select Service plan\n//Go with default selected Fuse Shift 120V\ncy.log('Step 3:Select Service plan');\ncy.get('a[href=\"#/service/\"]').click();\nvar servicePlan = _fuse_1_high_efficiency_package.default.fuseAndShiftPremiumServicePlans; //Check Fuse and Sift Premium Service 1 Year plan\ncy.checkServicePlan(1, servicePlan[0].name, servicePlan[0].price); //Check Fuse and Sift Premium Service 2 Year plan\ncy.checkServicePlan(2, servicePlan[1].name, servicePlan[1].price); //Check Fuse and Sift Premium Service 3 Year plan\ncy.checkServicePlan(3, servicePlan[2].name, servicePlan[2].price); //Step back and deselect Fuse Shift 120V\ncy.get('a[href=\"#/customize/\"]').click({\n  force: true\n});\ncy.get('span[class^=\"ProductOptionControl_title\"]').eq(7).click(); //Test service plans price for only fuse 1 selected\ncy.get('a[href=\"#/service/\"]').click();\nvar fuseServicePlan = _fuse_1_high_efficiency_package.default.fusePremiumServicePlans;\nvar productCardPosition = 1;\ncy.get(fuseServicePlan).each((item, index) => {\n  cy.checkServicePlan(productCardPosition, fuseServicePlan[index].name, fuseServicePlan[index].price);\n  cy.log(item);\n  productCardPosition++;\n});",
+              "err": {},
+              "uuid": "b2622731-3cab-413c-ab25-875bc42815dd",
+              "parentUUID": "90a4ec6c-fe01-4cfe-a509-f772c15ada26",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Test Fuse 1 Maximum Throughput Package",
+              "fullTitle": "Fuse 1 configuration flow Test Fuse 1 Maximum Throughput Package",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Step 1: Select and go with Fuse 1 Maximum Throughput Package\ncy.get('span').contains('Fuse 1 Maximum Throughput Package').click();\ncy.get('a[href=\"#/customize/\"]').click(); //Step 2: Customise, Check default selected products and their prices\n//Check Fuse 1 Printer 120V\nvar product = _fuse_1_max_throughput_package.default.defaultSelectedProducts;\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 2); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 2); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(3, product[2].id, product[2].name, product[2].price, 2); //Check Fuse 1 Powder Cartridge\ncy.checkProductData(4, product[3].id, product[3].name, product[3].price, 4); //Check Fuse 1 Printer Stand\ncy.checkProductData(5, product[4].id, product[4].name, product[4].price, 2); //Check Nylon 12 Powder 6 kg\ncy.checkProductData(6, product[5].id, product[5].name, product[5].price, 10); //Check Fuse Shift 120V\ncy.checkProductData(8, product[6].id, product[6].name, product[6].price, 2); //Step 3:Select Service plan\n//Go with default selected Fuse Shift 120V\ncy.log('Step 3:Select Service plan');\ncy.get('a[href=\"#/service/\"]').click();\nvar servicePlan = _fuse_1_max_throughput_package.default.fuseAndShiftPremiumServicePlans; //Check Fuse and Sift Premium Service 1 Year plan\ncy.checkServicePlan(1, servicePlan[0].name, servicePlan[0].price); //Check Fuse and Sift Premium Service 2 Year plan\ncy.checkServicePlan(2, servicePlan[1].name, servicePlan[1].price); //Check Fuse and Sift Premium Service 3 Year plan\ncy.checkServicePlan(3, servicePlan[2].name, servicePlan[2].price); //Step back and deselect Fuse Shift 120V\ncy.get('a[href=\"#/customize/\"]').click({\n  force: true\n});\ncy.get('span[class^=\"ProductOptionControl_title\"]').eq(7).click(); //Test service plans price for only fuse 1 selected\ncy.get('a[href=\"#/service/\"]').click();\nvar fuseServicePlan = _fuse_1_max_throughput_package.default.fusePremiumServicePlans;\nvar productCardPosition = 1;\ncy.get(fuseServicePlan).each((item, index) => {\n  cy.checkServicePlan(productCardPosition, fuseServicePlan[index].name, fuseServicePlan[index].price);\n  cy.log(item);\n  productCardPosition++;\n});",
+              "err": {},
+              "uuid": "d608ed5a-8189-44c8-a942-dce8e5cf9d2c",
+              "parentUUID": "90a4ec6c-fe01-4cfe-a509-f772c15ada26",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Test Fuse 1 Build Your Own Package",
+              "fullTitle": "Fuse 1 configuration flow Test Fuse 1 Build Your Own Package",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Step 1: Select and go with Fuse 1 Maximum Throughput Package\ncy.get('span').contains('Fuse 1 Build Your Own Package').click();\ncy.get('a[href=\"#/customize/\"]').click(); //Step 2: Customise, Check default selected products and their prices\n//Check Fuse 1 Printer 120V\nvar product = _fuse_1_build_your_own_package.default.defaultSelectedProducts;\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 1); //Check Fuse 1 Build Chamber 120V\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 1); //Step 3:Select Service plan\n//Test service plans price for only fuse 1 selected\ncy.get('a[href=\"#/service/\"]').click();\nvar fuseServicePlan = _fuse_1_build_your_own_package.default.fusePremiumServicePlans;\nvar productCardPosition = 1;\ncy.get(fuseServicePlan).each((item, index) => {\n  cy.checkServicePlan(productCardPosition, fuseServicePlan[index].name, fuseServicePlan[index].price);\n  cy.log(item);\n  productCardPosition++;\n});",
+              "err": {},
+              "uuid": "15433a7c-8d32-4829-87d5-45ccd3ab327a",
+              "parentUUID": "90a4ec6c-fe01-4cfe-a509-f772c15ada26",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d5648a46-484e-4c93-b225-00b7f5c5b465"
+          ],
+          "pending": [],
+          "skipped": [
+            "b2622731-3cab-413c-ab25-875bc42815dd",
+            "d608ed5a-8189-44c8-a942-dce8e5cf9d2c",
+            "15433a7c-8d32-4829-87d5-45ccd3ab327a"
+          ],
+          "duration": 57,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

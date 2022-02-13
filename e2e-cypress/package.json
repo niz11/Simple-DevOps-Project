@@ -1,0 +1,31 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "./node_modules/.bin/cypress run",
+    "cy:open": "./node_modules/.bin/cypress open",
+    "test:chrome": "npm run test -- --browser chrome --headless",
+    "mergeReports": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome-report/mochawesome.json",
+    "generateHtml": "npm run mergeReports && npx marge mochawesome-report/mochawesome.json",
+    "test:docker": "./run-docker.sh",
+    "test:visual": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:8.3.1 --browser chrome --spec 'cypress/integration/formlabs/visual/*'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@zohaib101/cypress-slack-reporter": "^1.4.1",
+    "cypress": "^8.7.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "dependencies": {
+    "cypress-image-snapshot": "^4.0.1",
+    "gmail-tester": "^1.3.2",
+    "mocha": "^9.1.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi-reporters": "^1.5.1"
+  }
+}

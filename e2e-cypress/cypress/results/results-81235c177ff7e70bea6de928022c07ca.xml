@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0270" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-02-08T16:08:18" tests="1" file="cypress/integration/formlabs/shared/header_menu_desktop_spec.js" time="0.0270" failures="1">
+    <testcase name="An uncaught error was detected outside of a test" time="0.0270" classname="An uncaught error was detected outside of a test">
+      <failure message="The following error originated from your test code, not from Cypress.
+
+  &gt; Cannot call `cy.log()` outside a running test.
+
+This usually happens when you accidentally write commands outside an `it(...)` test.
+
+If that is the case, just move these commands inside an `it(...)` test.
+
+Check your test file for errors.
+
+When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.
+
+Cypress could not associate this error to any specific test.
+
+We dynamically generated a new test to display this failure.
+
+https://on.cypress.io/cannot-execute-commands-outside-test" type="CypressError"><![CDATA[CypressError: The following error originated from your test code, not from Cypress.
+
+  > Cannot call `cy.log()` outside a running test.
+
+This usually happens when you accidentally write commands outside an `it(...)` test.
+
+If that is the case, just move these commands inside an `it(...)` test.
+
+Check your test file for errors.
+
+When Cypress detects uncaught errors originating from your test code it will automatically fail the current test.
+
+Cypress could not associate this error to any specific test.
+
+We dynamically generated a new test to display this failure.
+
+https://on.cypress.io/cannot-execute-commands-outside-test
+    at Object.ensureRunnable (http://localhost:62211/__cypress/runner/cypress_runner.js:160499:85)
+    at $Cy.cy.<computed> [as log] (http://localhost:62211/__cypress/runner/cypress_runner.js:169919:19)
+    at Object.create (http://localhost:62211/__cypress/runner/cypress_runner.js:118474:19)
+    at context.describe.context.context (http://localhost:62211/__cypress/runner/cypress_runner.js:118250:27)
+    at http://localhost:62211/__cypress/runner/cypress_runner.js:174237:21
+    at http://localhost:62211/__cypress/runner/cypress_runner.js:177228:16
+    at arrayEach (http://localhost:62211/__cypress/runner/cypress_runner.js:40119:11)
+    at Function.forEach (http://localhost:62211/__cypress/runner/cypress_runner.js:48999:14)
+    at evalScripts (http://localhost:62211/__cypress/runner/cypress_runner.js:177227:49)
+    at http://localhost:62211/__cypress/runner/cypress_runner.js:177235:152
+    at tryCatcher (http://localhost:62211/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:62211/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:62211/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:62211/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:62211/__cypress/runner/cypress_runner.js:11329:18)
+    at Promise._fulfill (http://localhost:62211/__cypress/runner/cypress_runner.js:11273:18)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

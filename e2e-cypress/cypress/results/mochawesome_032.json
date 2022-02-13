@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-09T08:08:11.016Z",
+    "end": "2022-02-09T08:08:11.315Z",
+    "duration": 299,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "253f45b3-b5ca-4189-b517-074c551860a1",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/request_sample_part/request_sample_part_desktop_spec.js",
+      "file": "cypress/integration/formlabs/request_sample_part/request_sample_part_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ea1ad6b-9126-44f3-a635-99e27fcec950",
+          "title": "Request sample part: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1.1 Tests application & printer filter and tests request sample part flow",
+              "fullTitle": "Request sample part: Desktop TC1.1 Tests application & printer filter and tests request sample part flow",
+              "timedOut": null,
+              "duration": 73,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Clears the abtest_202011_Sample_Request_Single_Form Cookie\ncy.clearCookie('abtest_202011_Sample_Request_Single_Form'); //Visit the Request Sample Part page\ncy.visit(Cypress.env('HOST') + '/request-sample-part/'); //Set the A/B Test Cookie value\ncy.setCookie('abtest_202011_Sample_Request_Single_Form', 'Single_Form_Sample_Request_Single_Form'); //Varify the set value of A/B Test Cookie\ncy.getCookie('abtest_202011_Sample_Request_Single_Form').should('have.property', 'value', 'Single_Form_Sample_Request_Single_Form'); //Filters the parts by Application and Printer and select \"Draft\" sample part\ncy.get('select[aria-label=\"Filter by Application\"]').select('Standard');\ncy.get('select[aria-label=\"Filter by Printer\"]').select('Form 3');\ncy.get('p').contains('Draft').click();\ncy.get('span').contains('Proceed with Draft').click(); //Uses user_data from fixtures\ncy.fixture('user_data').then(user => {\n  //Enters the user data\n  cy.get('input[aria-label=\"First Name\"]').type(user.firstName);\n  cy.get('input[aria-label=\"Last Name\"]').type(user.lastName);\n  cy.get('[id^=Sample_Parts][id$=_email_Email]').type(user.email);\n  cy.wait(3000); //Enters data in Tell us some more fields\n  cy.get('#Sample_Parts_text_Company').type(user.company);\n  cy.get('#Sample_Parts_companySize_NumberOfEmployees').select('Self-employed');\n  cy.get('[id^=Sample_Parts_occupation_How_would_you_describe_yourself]').select('Engineer');\n  cy.get('[id^=Sample_Parts_select_How_do_you_plan_to_use_your_sample_part]').select('Evaluating purchasing a 3D printer');\n  cy.wait(3000); //Enters Shipping Address\n  cy.get('#Sample_Parts_text_Address').type(user.street);\n  cy.get('#Sample_Parts_text_City').type(user.city);\n  cy.get('[id^=Sample_Parts_country]').select('Germany');\n  cy.get('#Sample_Parts_text_PostalCode').type(user.postalCode);\n  cy.get('#Sample_Parts_tel_Phone').type(user.mobNumber);\n}); //Confirms Order\ncy.get('button').contains('Confirm Order').click();\ncy.wait(3000); // Verify Thank you page at successful sample part request submission\ncy.contains('Thank you for your request');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/request-sample-part/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/request-sample-part/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/request-sample-part/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/request-sample-part/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/request_sample_part/request_sample_part_desktop_spec.js:104:8)",
+                "diff": null
+              },
+              "uuid": "03aa68dc-436f-4a71-a977-38a37fbf004d",
+              "parentUUID": "9ea1ad6b-9126-44f3-a635-99e27fcec950",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "03aa68dc-436f-4a71-a977-38a37fbf004d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 73,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

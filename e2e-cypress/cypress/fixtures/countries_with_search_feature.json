@@ -1,0 +1,67 @@
+{
+  "countries": [
+    {
+      "countryCode": "",
+      "shopURL": "/store/",
+      "searchBoxPlaceholder": "Type to search…",
+      "noResultFoundText": "No results were found matching your search term.",
+      "resetButtonText": "Reset your search",
+      "pagesResultHeading": "Pages",
+      "logoAlt": "Formlabs Logo"
+    },
+    {
+      "countryCode": "uk",
+      "shopURL": "/uk/store/",
+      "searchBoxPlaceholder": "Type to search…",
+      "noResultFoundText": "No results were found matching your search term.",
+      "resetButtonText": "Reset your search",
+      "pagesResultHeading": "Pages",
+      "logoAlt": "Formlabs Logo"
+    },
+    {
+      "countryCode": "eu",
+      "shopURL": "/eu/store/",
+      "searchBoxPlaceholder": "Type to search…",
+      "noResultFoundText": "No results were found matching your search term.",
+      "resetButtonText": "Reset your search",
+      "pagesResultHeading": "Pages",
+      "logoAlt": "Formlabs Logo"
+    },
+    {
+      "countryCode": "de",
+      "shopURL": "/de/shop",
+      "searchBoxPlaceholder": "Suchbegriff eingeben…",
+      "noResultFoundText": "Ihre Suche ergab keine Treffer.",
+      "resetButtonText": "Suche zurücksetzen",
+      "pagesResultHeading": "Seiten",
+      "logoAlt": "Formlabs Logo"
+    },
+    {
+      "countryCode": "es",
+      "shopURL": "/es/store/",
+      "searchBoxPlaceholder": "Escribe para buscar...",
+      "noResultFoundText": "",
+      "resetButtonText": "",
+      "pagesResultHeading": "",
+      "logoAlt": "Logo de Formlabs"
+    },
+    {
+      "countryCode": "fr",
+      "shopURL": "/fr/boutique/",
+      "searchBoxPlaceholder": "Saisissez votre recherche...",
+      "noResultFoundText": "Votre recherche n'a donné aucun résultat.",
+      "resetButtonText": "Lancez une nouvelle recherche",
+      "pagesResultHeading": "Pages",
+      "logoAlt": "Logo de Formlabs"
+    },
+    {
+      "countryCode": "it",
+      "shopURL": "/it/negozio/",
+      "searchBoxPlaceholder": "Digita per iniziare la ricerca...",
+      "noResultFoundText": "Non è stato trovato nessun risultato che corrisponda al termine di ricerca.",
+      "resetButtonText": "Azzera la ricerca",
+      "pagesResultHeading": "Pagine",
+      "logoAlt": "Logo di Formlabs"
+    }
+  ]
+}

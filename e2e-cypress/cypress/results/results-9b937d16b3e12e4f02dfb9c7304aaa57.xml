@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0530" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2022-02-09T08:09:47" tests="0" file="cypress/integration/formlabs/shared/top_pages_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Tests top pages" timestamp="2022-02-09T08:09:47" tests="2" time="0.0530" failures="2">
+    <testcase name="Tests top pages Test Formlabs top page are Application Error free and links are not broken" time="0.0460" classname="Test Formlabs top page are Application Error free and links are not broken">
+      <failure message="`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument
+
+https://on.cypress.io/visit" type="CypressError"><![CDATA[CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument
+
+https://on.cypress.io/visit
+    at Context.visit (http://localhost:51292/__cypress/runner/cypress_runner.js:155705:78)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/shared/top_pages_desktop_spec.js:102:8)]]></failure>
+    </testcase>
+    <testcase name="Tests top pages Test Dental top page are Application Error free and links are not broken" time="0.0070" classname="Test Dental top page are Application Error free and links are not broken">
+      <failure message="Cannot read properties of undefined (reading &apos;includes&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'includes')
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/shared/top_pages_desktop_spec.js:124:28)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

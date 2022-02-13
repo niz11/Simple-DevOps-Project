@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-08T10:25:41.408Z",
+    "end": "2022-02-08T10:26:29.248Z",
+    "duration": 47840,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "756726fb-da71-4ae4-aba9-8bd995db293d",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shared/header_menu_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shared/header_menu_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6187d9bd-5b76-4257-964d-3c8cd16915f4",
+          "title": "Header menu: Desktop ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC7.1 Tests Desktop header menu",
+              "fullTitle": "Header menu: Desktop  TC7.1 Tests Desktop header menu",
+              "timedOut": null,
+              "duration": 16409,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Visit HOST\ncy.visit(Cypress.env('HOST')); //Verify that navigation bar is visible and main menu item links to right page\ncy.get('div[role=\"navigation\"]').should('be.visible').within(() => {\n  cy.get('a').contains('3D Printers').should('have.attr', 'href', '/3d-printers/catalog/');\n  cy.get('a').contains('Materials').should('have.attr', 'href', '/materials/');\n  cy.get('a').contains('Software').should('have.attr', 'href', '/software/');\n  cy.get('a').contains('Services').should('have.attr', 'href', '/services/');\n  cy.get('a').contains('Industries').should('have.attr', 'href', '/industries/');\n  cy.get('a').contains('Learn').should('have.attr', 'href', '/blog/');\n  cy.get('a').contains('Support').should('have.attr', 'href', 'https://support.formlabs.com/s/?language=en_US');\n}); //***********************************************************\n//Dropdown menu testing\n//***********************************************************\n//Verify 3D Printers sub menu text and images are visible and links to correct page\ncy.get('div[role=\"navigation\"]').should('be.visible').within(() => {\n  cy.get('a').contains('3D Printers').trigger('mouseover');\n});\ncy.get('img[alt=\"Form 3+\"]').should('be.visible').parents('a').should('have.attr', 'href', '/3d-printers/form-3/').siblings('a').should('have.attr', 'href', '/3d-printers/form-3/').children('span').should('contain', 'Form 3+');\ncy.get('[alt=\"Form 3L\"]').should('be.visible').parents('a').should('have.attr', 'href', '/3d-printers/form-3l/').siblings('a').should('have.attr', 'href', '/3d-printers/form-3l/').children('span').should('contain', 'Form 3L');\ncy.get('[alt=\"Fuse 1\"]').should('be.visible').parents('a').should('have.attr', 'href', '/3d-printers/fuse-1/').siblings('a').should('have.attr', 'href', '/3d-printers/fuse-1/').children('span').should('contain', 'Fuse 1');\ncy.get('[alt=\"Form 3B+\"]').should('be.visible').parents('a').should('have.attr', 'href', '/3d-printers/form-3b/').siblings('a').should('have.attr', 'href', '/3d-printers/form-3b/').children('span').should('contain', 'Form 3B+');\ncy.get('[alt=\"Form 3BL\"]').should('be.visible').parents('a').should('have.attr', 'href', '/3d-printers/form-3bl/').siblings('a').should('have.attr', 'href', '/3d-printers/form-3bl/').children('span').should('contain', 'Form 3BL');\ncy.get('[alt=\"Post-Processing\"]').should('be.visible').parents('a').should('have.attr', 'href', '/post-processing/').siblings('a').should('have.attr', 'href', '/post-processing/').children('span').should('contain', 'Post-Processing'); //Verify Materials sub menu text and images are visible\ncy.get('a').contains('Materials').should('have.attr', 'href', '/materials/').trigger('mouseover'); // Verify that Materials main categories(should not be less than 8) are visible,\n// have 'href' attribute and cover picture is visible\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(0).should('be.visible').children('a').should('not.have.length.lt', 8).each($submenu => {\n  expect($submenu).to.have.attr('href');\n  cy.get($submenu).trigger('mouseover');\n  cy.get('div[class^=\"HeaderMenu_menu-image\"]').should('be.visible');\n});\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(1).should('be.visible').children('a').each($submenu => {\n  expect($submenu).to.have.attr('href');\n}); //Verify Software sub menu text and images are visible and links to correct page\ncy.get('a').contains('Software').trigger('mouseover');\ncy.get('img[alt=\"PreForm\"]').should('be.visible').parents('a').should('have.attr', 'href', '/software/#preform').siblings('a').should('have.attr', 'href', '/software/#preform').children('span').should('contain', 'PreForm');\ncy.get('img[alt=\"Dashboard\"]').should('be.visible').parents('a').should('have.attr', 'href', '/dashboard/').siblings('a').should('have.attr', 'href', '/dashboard/').children('span').should('contain', 'Dashboard'); //Verify Learn sub menu text and images are visible\ncy.get('div[role=\"navigation\"]').should('be.visible').within(() => {\n  cy.get('a').contains('Learn').trigger('mouseover');\n}); // Verify that Learn main categories (should not be less than 5) are visible,\n// have 'href' attribute and cover picture is visible\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(0).should('be.visible').children('a').should('not.have.length.lt', 5).each($submenu => {\n  expect($submenu).to.have.attr('href');\n  cy.get($submenu).trigger('mouseover');\n  cy.get('div[class^=\"HeaderMenu_menu-image\"]').should('be.visible');\n});\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(1).children('p').should('be.visible'); //Verify Industries sub menu text and images are visible\ncy.get('a').contains('Industries').trigger('mouseover'); // Verify that Industries main categories (should not be less than 5) are visible,\n// have 'href' attribute and cover picture is visible\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(0).should('be.visible').children('a').should('not.have.length.lt', 5).each($submenu => {\n  expect($submenu).to.have.attr('href');\n  cy.get($submenu).trigger('mouseover');\n  cy.get('div[class^=\"HeaderMenu_menu-image\"]').should('be.visible');\n});\ncy.get('div[class^=\"HeaderMenu_description-secondary\"]').eq(1).children('p').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '[ <a.HeaderMenu_dropdown-left__QgXiy.HeaderMenu_selected-secondary__SQQGO>, 6 more... ]' to not have a length below 8",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '[ <a.HeaderMenu_dropdown-left__QgXiy.HeaderMenu_selected-secondary__SQQGO>, 6 more... ]' to not have a length below 8\n    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/shared/header_menu_desktop_spec.js:130:103)",
+                "diff": "- 7\n+ 8\n"
+              },
+              "uuid": "2ac3d5b5-dae5-4051-9559-268105753998",
+              "parentUUID": "6187d9bd-5b76-4257-964d-3c8cd16915f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2ac3d5b5-dae5-4051-9559-268105753998"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

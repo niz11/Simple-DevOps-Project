@@ -1,0 +1,91 @@
+pipeline {
+  agent any
+  environment {
+        SLACK_WEBHOOK_URL = credentials("web-alerts-webhook-url")
+    }
+  parameters {
+    string(
+      name: 'cypressImage',
+      description: 'The Docker image to use for cypress',
+      defaultValue: params.testcafeImage ?: 'cypress/included:8.3.1'
+    )
+    string(
+      name: 'BRANCH',
+      description: 'The branch to run the tests from',
+      defaultValue: params.BRANCH ?: 'master'
+    )
+    string(
+      name: 'HOST',
+      description: 'The url to run the tests on',
+      defaultValue: params.TEST_URL ?: 'https://staging.formlabs.com'
+    )
+    string(
+      name: 'browsers',
+      description: 'Target browsers to run the tests in',
+      defaultValue: params.browsers ?: 'chrome'
+    )
+    string(
+      name: 'testPath',
+      description: 'Path to the test you want to run. Note: Enter the full path including the file type: {path}.js',
+      defaultValue: params.testPath ?: 'cypress/integration/formlabs/shop/checkout_desktop_spec.js'
+    )
+  }
+
+  stages {
+    stage('Remove cypress/screenshots if still there') {
+      steps {
+        echo 'Chown to user Jenkins'
+        sh "rm -f cypress/screenshots"
+      }  
+    }
+    stage('Check out repo') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[name: 'FL-2763-Split-Tests-Add-To-QA-PR-Test-Response']],
+          userRemoteConfigs: [[credentialsId: 'api', url: 'git@github.com:formlabs/formlabs-web.git']]
+      ])
+      }
+    }
+    stage('Get credential files') {
+      steps {
+          withCredentials([file(credentialsId: 'jenkins-formlabs-e2e-test-gmail-credentials', variable: 'credentials'),
+                        file(credentialsId: 'jenkins-formlabs-e2e-test-gmail-token', variable: 'gmail_token')]) {
+            writeFile file: 'e2e-cypress/cypress/plugins/credentials.json', text: readFile(credentials)
+            writeFile file: 'e2e-cypress/cypress/plugins/gmail_token.json', text: readFile(gmail_token)
+        }
+      }
+    }   
+    stage('Run e2e tests') {
+      steps {
+        script {
+          docker.image(params.cypressImage).inside("--env CYPRESS_HOST=${params.HOST} --network host --entrypoint='' --user root") {
+            sh "cd e2e-cypress && npm ci && cypress run --quiet --browser ${params.browsers} --spec ${params.testPath}  || exit 0 "
+            sh "cd e2e-cypress && npm run generateHtml && mv mochawesome-report mochareports && rm -rf cypress/screenshots"
+            echo "Did not fail"
+          }
+        }
+      }
+    }
+  }
+
+  post {
+    always {
+      catchError {
+        archiveArtifacts artifacts: '**/*.diff.png', fingerprint: true, allowEmptyArchive: true
+        junit 'e2e-cypress/cypress/results/*.xml'
+      }
+      publishHTML target : [
+        allowMissing: false,
+        alwaysLinkToLastBuild: true,
+        keepAll: true,
+        reportDir: 'e2e-cypress/mochareports',
+        reportFiles: 'mochawesome.html',
+        reportName: 'Cypress HTML Reports',
+        reportTitles: 'The Report']
+    }
+    cleanup {
+      deleteDir()
+    }
+  }
+} 

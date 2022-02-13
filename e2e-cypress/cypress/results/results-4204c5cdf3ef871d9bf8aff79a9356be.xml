@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="23.8480" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-01-19T15:39:29" tests="0" file="cypress/integration/formlabs/shared/top_pages_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Tests top pages" timestamp="2022-01-19T15:39:29" tests="1" time="23.8480" failures="0">
+    <testcase name="Tests top pages Test Dental top page are Application Error free and links are not broken" time="23.8480" classname="Test Dental top page are Application Error free and links are not broken">
+    </testcase>
+  </testsuite>
+</testsuites>

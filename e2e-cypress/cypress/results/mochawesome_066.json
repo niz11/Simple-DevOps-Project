@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-10T09:45:46.328Z",
+    "end": "2022-02-10T09:46:28.470Z",
+    "duration": 42142,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "424a0b21-cdbb-4438-83c7-7a4f8e60fe23",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/simple/simple_tests.js",
+      "file": "cypress/integration/formlabs/simple/simple_tests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "456f144d-9305-4f58-928d-eabec9f80a2c",
+          "title": "General simple Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Formlabs top pages have no Application Error",
+              "fullTitle": "General simple Tests Test Formlabs top pages have no Application Error",
+              "timedOut": null,
+              "duration": 25231,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const corePages = ['/', '/3d-printers/', '/materials/', '/materials/', '/store/', '/blog/'];\ncorePages.forEach(page => {\n  cy.visit(`${Cypress.env('HOST')}${page}`);\n  cy.get('body').should('not.contain.text', 'Application error: a client-side exception has occurred');\n  cy.title().should('not.eq', 'Page Not Found');\n  cy.log('created new user');\n});",
+              "err": {},
+              "uuid": "9b7634dd-e537-40e7-a0d6-068b2e0932d6",
+              "parentUUID": "456f144d-9305-4f58-928d-eabec9f80a2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Dental top pages have no Application Error",
+              "fullTitle": "General simple Tests Test Dental top pages have no Application Error",
+              "timedOut": null,
+              "duration": 14655,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const dentalPages = ['/products/', '/post-processing/', '/materials/', '/store/', '/blog/'];\ndentalPages.forEach(page => {\n  if (Cypress.env('HOST').includes('staging')) {\n    cy.visit(`https://dental-staging.formlabs.com${page}`);\n  } else {\n    cy.visit(`https://dental.formlabs.com${page}`);\n  }\n  cy.get('body').should('not.contain.text', 'Application error: a client-side exception has occurred');\n});",
+              "err": {},
+              "uuid": "def6cfdf-3783-484d-8ccb-5842ec5f9e08",
+              "parentUUID": "456f144d-9305-4f58-928d-eabec9f80a2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9b7634dd-e537-40e7-a0d6-068b2e0932d6",
+            "def6cfdf-3783-484d-8ccb-5842ec5f9e08"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39886,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

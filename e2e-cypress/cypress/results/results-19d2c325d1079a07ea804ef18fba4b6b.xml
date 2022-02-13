@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0440" tests="4" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-02-09T08:08:42" tests="0" file="cypress/integration/formlabs/user/user_account_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="User account: Desktop" timestamp="2022-02-09T08:08:42" tests="4" time="0.0440" failures="1">
+    <testcase name="User account: Desktop &quot;before each&quot; hook for &quot;TC3.1 Tests new user account creation flow&quot;" time="0.0440" classname="&quot;before each&quot; hook for &quot;TC3.1 Tests new user account creation flow&quot;">
+      <failure message="`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument
+
+https://on.cypress.io/visit
+
+Because this error occurred during a `before each` hook we are skipping all of the remaining tests." type="CypressError"><![CDATA[CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument
+
+https://on.cypress.io/visit
+
+Because this error occurred during a `before each` hook we are skipping all of the remaining tests.
+    at Context.visit (http://localhost:51210/__cypress/runner/cypress_runner.js:155705:78)
+From Your Spec Code:
+    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/user/user_account_desktop_spec.js:101:6)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,45 @@
+{
+  "defaultSelectedProducts": [
+    {
+      "id": "7001400",
+      "name": "Fuse 1 Printer 120V",
+      "quantity": "1",
+      "price": 15400
+    },
+    {
+      "id": "7001716",
+      "name": "Fuse 1 Build Chamber 120V",
+      "quantity": "1",
+      "price": 3099
+    }
+  ], 
+ "fuseAndShiftPremiumServicePlans": [
+     {
+         "name": "Fuse and Sift Premium Service 1 Year",
+         "price": 4500
+     },
+     {
+        "name": "Fuse and Sift Premium Service 2 Years",
+        "price": 9360
+    },
+     {
+        "name": "Fuse and Sift Premium Service 3 Years",
+        "price": 13855
+    }
+ ],
+ "fusePremiumServicePlans":[
+     {
+         "name": "Fuse Premium Service 1 Year",
+         "price": 3500
+     },
+     {
+        "id": "7001804",
+        "name": "Fuse Premium Service 2 Years",
+        "price": 8100
+    },
+    {
+        "name": "Fuse Premium Service 3 Years",
+        "price": 12325
+    }
+ ]
+}

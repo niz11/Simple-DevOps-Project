@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-04T10:30:31.464Z",
+    "end": "2022-02-04T10:31:18.870Z",
+    "duration": 47406,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9288484-f8e0-4c94-b1ce-d680c5549dc1",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js",
+      "file": "cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9adce495-274b-4eab-ac81-2411ff493e3e",
+          "title": "ROI Calculator: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC6.1 Test one path and final report",
+              "fullTitle": "ROI Calculator: Desktop TC6.1 Test one path and final report",
+              "timedOut": null,
+              "duration": 14566,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/roi'); //Select industry\ncy.get('img[alt=\"Manufacturing\"]').click();\ncy.get('span').contains('Continue').click(); //Select printer\ncy.get('img[alt=\"Form 3L\"]').click();\ncy.get('span').contains('Continue').click(); //Select Part\ncy.get('img[alt=\"Enclosure\"]').click();\ncy.get('span').contains('Continue').click(); //Continue with default production need values\ncy.get('span').contains('Continue').click(); //Change values at last step\ncy.get('#industries').select('Engineering');\ncy.get('#printers').select('Fuse 1');\ncy.get('#parts').select('Bike Pedals');\ncy.get('img[alt=\"Bike Pedals\"]').should('be.visible');\ncy.get('#production-parts').type('{leftarrow}1');\ncy.get('#production-time').select('week');\ncy.get('#production-cost').type('{backspace}{backspace}{rightarrow}5'); //Fill form to see Your Complete Report\ncy.fixture('user_data').then(user => {\n  cy.get('#ROI_Calculator_text_FirstName').type(user.firstName);\n  cy.get('#ROI_Calculator_text_LastName').type(user.lastName);\n  cy.get('#ROI_Calculator_email_Email').type(user.email);\n  cy.get('input[aria-label=\"Phone\"]').type(user.mobNumber);\n  cy.get('#ROI_Calculator_text_Company').type(user.company);\n  cy.get('#ROI_Calculator_countryAndUsState_Country').select('Germany');\n  cy.get('select[id^=\"ROI_Calculator_occupation_How_would_you_describe_yourself\"]').select('Engineer');\n  cy.get('button[form=\"form_ROI_Calculator\"]').click();\n}); //Verify parts per year and per month calculations\ncy.get('span').contains('Parts Per Year').siblings().should('contain', '780');\ncy.get('span').contains('Parts Per Month').siblings().should('contain', '65'); //Verify Cost per Part Depending on Production Rate calculations and graph are visible\ncy.get('span').contains('Cost per Part').siblings().should('contain', '16');\ncy.get('svg#costPerPart').should('be.visible'); //Compare to Alternatives\n//Outsourcing (Benchmark)\ncy.get('svg#costOverTime').should('be.visible'); //Verify graphs for Outsourced Production & In-House Alternative are visible\ncy.get('button').contains('Outsourced Production').click();\ncy.get('svg#costOverTime').should('be.visible'); //Verify Costs per Part Breakdown Table is visible\ncy.get('div[class^=\"CostBreakdownTable\"]').should('be.visible'); //Verify Production Time for a Single Part graph is visible\ncy.get('div[class^=\"LeadTimesGraph\"]').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `svg#costOverTime`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `svg#costOverTime`, but never found it.\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js:140:32)",
+                "diff": null
+              },
+              "uuid": "8c02bd81-aa6c-4208-9c48-635ed615f51d",
+              "parentUUID": "9adce495-274b-4eab-ac81-2411ff493e3e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8c02bd81-aa6c-4208-9c48-635ed615f51d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

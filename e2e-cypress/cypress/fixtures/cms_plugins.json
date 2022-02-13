@@ -1,0 +1,100 @@
+{
+  "modules": [
+    {
+      "name": "1-internal-image-light-v2",
+      "path": ".cy-internal-image-light"
+    },
+    {
+      "name": "1-internal-image-dark-v2",
+      "path": ".cy-internal-image-dark"
+    },
+    {
+      "name": "2-background-images-left-v2",
+      "path": ".cy-background-images-left"
+    },
+    {
+      "name": "2-background-images-right-v2",
+      "path": ".cy-background-images-right"
+    },
+    {
+      "name": "3-fullWidthCenteredTextCta-v2",
+      "path": "#fullWidthCenteredTextCta"
+    },
+    {
+      "name": "4-image-over-text-left-v2",
+      "path": ".cy-image-over-text-left"
+    },
+    {
+      "name": "4-image-over-text-right-v2",
+      "path": ".cy-image-over-text-right"
+    },
+    {
+      "name": "5-full-width-with-small-image-v2",
+      "path": ".cy-full-width-with-small-image"
+    },
+    {
+      "name": "6-product-card-v2",
+      "path": "#product-card div[class^='Card_card-wrapper']"
+    },
+    {
+      "name": "7-two-column-image-plus-test-v2",
+      "path": "#two-column-image-plus-test"
+    },
+    {
+      "name": "8-card-with-icon-v2",
+      "path": "#card-with-icon div[class^='Card_card-wrapper']"
+    },
+    {
+      "name": "10-data-with-units-v2",
+      "path": "#data-with-units"
+    },
+    {
+      "name": "11-comparison-v2",
+      "path": "#comparison"
+    },
+    {
+      "name": "12-properties-detailed-v2",
+      "path": "#properties-detailed"
+    },
+    {
+      "name": "13-properties-simple-v2",
+      "path": "div[class^='cms-plugin-3798077']"
+    },
+    {
+      "name": "14-menu-list-v2",
+      "path": "#menu-list"
+    },
+    {
+      "name": "15-pdfs-v2",
+      "path": "#pdfs"
+    },
+    {
+      "name": "16-full-width-background-video-v2",
+      "path": ".cms-plugin-3798104"
+    },
+    {
+      "name": "17-hero-section-v2",
+      "path": ".cms-plugin-3798109"
+    },
+    {
+      "name": "18-hero-section-with-looping-video-cta-v2",
+      "path": "#hero-section-with-looping-video-cta"
+    },
+    {
+      "name": "19-newsletter-signup-v2",
+      "path": "#newsletter-signup"
+    },
+    {
+      "name": "20-callout-section-v2",
+      "path": "#callout-section"
+    },
+    {
+      "name": "21-blockquote-v2",
+      "path": ".cy-blockquote"
+    },
+    {
+      "name": "22-full-width-testimonial-v2",
+      "path": ".cms-plugin-3798167"
+    }
+  ]
+}

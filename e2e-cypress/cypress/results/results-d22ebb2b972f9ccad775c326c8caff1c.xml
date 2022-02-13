@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.9130" tests="42" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-04T11:08:13" tests="0" file="cypress/integration/formlabs/search/search_on_site_desktop.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop" timestamp="2022-02-04T11:08:13" tests="42" time="7.9130" failures="0">
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel" time="7.9130" classname="TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel">
+    </testcase>
+  </testsuite>
+</testsuites>

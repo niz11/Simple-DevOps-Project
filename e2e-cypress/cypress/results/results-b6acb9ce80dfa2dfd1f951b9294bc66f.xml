@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.5780" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-04T10:29:52" tests="0" file="cypress/integration/formlabs/forms/forms_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Forms: Desktop" timestamp="2022-02-04T10:29:52" tests="1" time="12.5780" failures="0">
+    <testcase name="Forms: Desktop TC5.1 Tests Contact Sales form" time="12.5780" classname="TC5.1 Tests Contact Sales form">
+    </testcase>
+  </testsuite>
+</testsuites>

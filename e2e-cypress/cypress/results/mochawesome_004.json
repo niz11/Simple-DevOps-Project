@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-19T15:47:51.618Z",
+    "end": "2022-01-19T15:50:31.370Z",
+    "duration": 159752,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1a39e0f4-d1a6-43ea-92d3-1d93c02a79fd",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shared/top_pages_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shared/top_pages_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93e62a17-d8b1-4859-a6a0-ee7e6f60140f",
+          "title": "Tests top pages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Formlabs top page are Application Error free and links are not broken",
+              "fullTitle": "Tests top pages Test Formlabs top page are Application Error free and links are not broken",
+              "timedOut": null,
+              "duration": 41674,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const corePages = ['/', '/3d-printers/catalog/', '/3d-printers/form-3/', '/3d-printers/form-3l/', '/3d-printers/fuse-1/', '/3d-printers/form-3b/', '/3d-printers/form-3bl/', '/post-processing/', '/materials/', '/materials/standard/', '/materials/engineering/', '/materials/rigid/', '/materials/tough-durable/', '/materials/flexible-elastic/', '/materials/jewelry/', '/materials/engineering/specialty/', '/industries/medical/materials/', '/materials/nylon/', '/material-selector/'];\ncy.visit(Cypress.env('HOST'));\ncorePages.forEach(page => {\n  if (page.includes('3d-printers')) {\n    cy.get('div[role=\"navigation\"]').within(() => {\n      cy.get('a[href=\"/3d-printers/catalog/\"]').trigger('mouseover');\n    });\n  } else {\n    cy.get('div[role=\"navigation\"]').within(() => {\n      cy.get('a[href=\"/materials/\"]').trigger('mouseover');\n    });\n  }\n  cy.get('a[href=\"' + page + '\"]').invoke('removeAttr', 'target').first().click({\n    force: true\n  });\n  cy.get('body').should('not.contain.text', 'Application error: a client-side exception has occurred');\n  cy.title().should('not.eq', 'Page Not Found');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href=\"/materials/engineering/specialty/\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href=\"/materials/engineering/specialty/\"]`, but never found it.\n    at eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/shared/top_pages_desktop_spec.js:114:10)\nat Array.forEach (<anonymous>)\n    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/shared/top_pages_desktop_spec.js:103:15)",
+                "diff": null
+              },
+              "uuid": "3b107d68-4ddf-4162-b1f9-c425e6306c35",
+              "parentUUID": "93e62a17-d8b1-4859-a6a0-ee7e6f60140f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3b107d68-4ddf-4162-b1f9-c425e6306c35"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41674,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

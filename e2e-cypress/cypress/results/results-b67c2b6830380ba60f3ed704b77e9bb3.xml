@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.0550" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-10T09:11:06" tests="0" file="cypress/integration/formlabs/general/general.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="General simple Tests" timestamp="2022-02-10T09:11:06" tests="2" time="15.0550" failures="0">
+    <testcase name="General simple Tests Test Formlabs top page are Application Error" time="7.9610" classname="Test Formlabs top page are Application Error">
+    </testcase>
+    <testcase name="General simple Tests Test Dental top page are Application Error" time="7.0940" classname="Test Dental top page are Application Error">
+    </testcase>
+  </testsuite>
+</testsuites>

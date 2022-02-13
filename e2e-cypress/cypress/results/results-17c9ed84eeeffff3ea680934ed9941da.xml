@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="20.0850" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2022-02-10T09:21:14" tests="0" file="cypress/integration/formlabs/general/general.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="General simple Tests" timestamp="2022-02-10T09:21:14" tests="2" time="20.0850" failures="2">
+    <testcase name="General simple Tests Test Formlabs top page are Application Error" time="8.7700" classname="Test Formlabs top page are Application Error">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `a[href=&quot;/3d-printers/&quot;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href="/3d-printers/"]`, but never found it.
+    at eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:114:10)
+at Array.forEach (<anonymous>)
+    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:103:15)]]></failure>
+    </testcase>
+    <testcase name="General simple Tests Test Dental top page are Application Error" time="11.3150" classname="Test Dental top page are Application Error">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `a[href=&quot;/post-processing/&quot;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href="/post-processing/"]`, but never found it.
+    at eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:136:10)
+at Array.forEach (<anonymous>)
+    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:130:17)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

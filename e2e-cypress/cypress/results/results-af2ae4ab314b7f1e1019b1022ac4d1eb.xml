@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.6810" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-02-10T09:19:56" tests="0" file="cypress/integration/formlabs/general/general.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="General simple Tests" timestamp="2022-02-10T09:19:56" tests="2" time="13.6810" failures="1">
+    <testcase name="General simple Tests Test Formlabs top page are Application Error" time="6.3330" classname="Test Formlabs top page are Application Error">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `a[href=&quot;/3d-printers/&quot;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[href="/3d-printers/"]`, but never found it.
+    at eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:104:10)
+at Array.forEach (<anonymous>)
+    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/general/general.js:103:15)]]></failure>
+    </testcase>
+    <testcase name="General simple Tests Test Dental top page are Application Error" time="7.3480" classname="Test Dental top page are Application Error">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-09T08:16:05.202Z",
+    "end": "2022-02-09T08:17:17.208Z",
+    "duration": 72006,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "05b350ab-3aa3-447c-9d2c-63dfecf05d5a",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/request_sample_part/request_sample_part_desktop_spec.js",
+      "file": "cypress/integration/formlabs/request_sample_part/request_sample_part_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "54d0b5bf-10b5-4c1e-9842-f57bc71a9345",
+          "title": "Request sample part: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1.1 Tests application & printer filter and tests request sample part flow",
+              "fullTitle": "Request sample part: Desktop TC1.1 Tests application & printer filter and tests request sample part flow",
+              "timedOut": null,
+              "duration": 26788,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Clears the abtest_202011_Sample_Request_Single_Form Cookie\ncy.clearCookie('abtest_202011_Sample_Request_Single_Form'); //Visit the Request Sample Part page\ncy.visit(Cypress.env('HOST') + '/request-sample-part/'); //Set the A/B Test Cookie value\ncy.setCookie('abtest_202011_Sample_Request_Single_Form', 'Single_Form_Sample_Request_Single_Form'); //Varify the set value of A/B Test Cookie\ncy.getCookie('abtest_202011_Sample_Request_Single_Form').should('have.property', 'value', 'Single_Form_Sample_Request_Single_Form'); //Filters the parts by Application and Printer and select \"Draft\" sample part\ncy.get('select[aria-label=\"Filter by Application\"]').select('Standard');\ncy.get('select[aria-label=\"Filter by Printer\"]').select('Form 3');\ncy.get('p').contains('Draft').click();\ncy.get('span').contains('Proceed with Draft').click(); //Uses user_data from fixtures\ncy.fixture('user_data').then(user => {\n  //Enters the user data\n  cy.get('input[aria-label=\"First Name\"]').type(user.firstName);\n  cy.get('input[aria-label=\"Last Name\"]').type(user.lastName);\n  cy.get('[id^=Sample_Parts][id$=_email_Email]').type(user.email);\n  cy.wait(3000); //Enters data in Tell us some more fields\n  cy.get('#Sample_Parts_text_Company').type(user.company);\n  cy.get('#Sample_Parts_companySize_NumberOfEmployees').select('Self-employed');\n  cy.get('[id^=Sample_Parts_occupation_How_would_you_describe_yourself]').select('Engineer');\n  cy.get('[id^=Sample_Parts_select_How_do_you_plan_to_use_your_sample_part]').select('Evaluating purchasing a 3D printer');\n  cy.wait(3000); //Enters Shipping Address\n  cy.get('#Sample_Parts_text_Address').type(user.street);\n  cy.get('#Sample_Parts_text_City').type(user.city);\n  cy.get('[id^=Sample_Parts_country]').select('Germany');\n  cy.get('#Sample_Parts_text_PostalCode').type(user.postalCode);\n  cy.get('#Sample_Parts_tel_Phone').type(user.mobNumber);\n}); //Confirms Order\ncy.get('button').contains('Confirm Order').click();\ncy.wait(3000); // Verify Thank you page at successful sample part request submission\ncy.contains('Thank you for your request');",
+              "err": {},
+              "uuid": "ae93da85-9ed8-40f3-a018-6f5e731e639a",
+              "parentUUID": "54d0b5bf-10b5-4c1e-9842-f57bc71a9345",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae93da85-9ed8-40f3-a018-6f5e731e639a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26788,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

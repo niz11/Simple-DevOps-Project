@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-04T10:29:52.379Z",
+    "end": "2022-02-04T10:30:08.134Z",
+    "duration": 15755,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2e8ee4c5-2daa-4c78-87c1-176abb9cfac2",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/forms/forms_desktop_spec.js",
+      "file": "cypress/integration/formlabs/forms/forms_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35e521fd-1d92-4382-b694-74e12f402a9f",
+          "title": "Forms: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC5.1 Tests Contact Sales form",
+              "fullTitle": "Forms: Desktop TC5.1 Tests Contact Sales form",
+              "timedOut": null,
+              "duration": 12578,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Visit HOST\ncy.visit(Cypress.env('HOST') + '/shipping/30-day-guarantee/'); //Enter data in all fields\ncy.fixture('user_data').then(user => {\n  cy.get('#Contact_Sales_text_FirstName').type(user.firstName);\n  cy.get('#Contact_Sales_text_LastName').type(user.lastName);\n  cy.get('#Contact_Sales_email_Email').type(user.email);\n  cy.get('input[aria-label=\"Phone\"]').type(user.mobNumber);\n  cy.get('#Contact_Sales_text_Company').type(user.company);\n  cy.get('#Contact_Sales_companySize_NumberOfEmployees').select('Self-employed');\n  cy.get('#Contact_Sales_occupation_How_would_you_describe_yourself__c').select('Engineer');\n  cy.get('#Contact_Sales_countryAndUsState_Country').select('Germany');\n  cy.get('#Contact_Sales_industry_Industry').select('Medical');\n  cy.get('#Contact_Sales_textarea_Sales_Question__c').type('Some text here'); //Submit form\n  cy.get('button[form=\"form_Contact_Sales\"]').click(); //Varify that message shows after successful form submission\n  cy.get('span[class^=\"Form_message\"]').should('be.visible');\n});",
+              "err": {},
+              "uuid": "83ff75a0-5283-49e5-903e-9e0f1abd82ca",
+              "parentUUID": "35e521fd-1d92-4382-b694-74e12f402a9f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83ff75a0-5283-49e5-903e-9e0f1abd82ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

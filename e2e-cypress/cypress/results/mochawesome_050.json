@@ -1,0 +1,151 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-09T08:09:51.077Z",
+    "end": "2022-02-09T08:09:51.322Z",
+    "duration": 245,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "2dea8f55-0450-41aa-9c47-5f64e8cb5532",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shop/form3l_package_specs.js",
+      "file": "cypress/integration/formlabs/shop/form3l_package_specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9cf9c4d0-ebd2-4df4-9749-e59972ceca5c",
+          "title": "Form 3L configuration flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test the Form 3L Complate Package that default products are selected",
+              "fullTitle": "Form 3L configuration flow Test the Form 3L Complate Package that default products are selected",
+              "timedOut": null,
+              "duration": 43,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Go with default packgae: Form 3L Complate Package\ncy.goToCustomizeStep();\nvar product = _form_3l_complete_package.default.defaultSelectedProducts; //Check Form 3L 3D printer\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 1); //Check Form 3L resin tank v2\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 1);\ncy.checkProductData(3, product[2].id, product[2].name, product[2].price, 1);\ncy.checkProductData(4, product[3].id, product[3].name, product[3].price, 1);\ncy.checkProductData(6, product[4].id, product[4].name, product[4].price, 1);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/3d-printers/form-3l-package/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/3d-printers/form-3l-package/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/3d-printers/form-3l-package/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/3d-printers/form-3l-package/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/shop/form3l_package_specs.js:133:6)",
+                "diff": null
+              },
+              "uuid": "4cceae74-daba-4c78-a297-799aeaa0a46a",
+              "parentUUID": "9cf9c4d0-ebd2-4df4-9749-e59972ceca5c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test warranties that show up on the services match the post processing chosen",
+              "fullTitle": "Form 3L configuration flow Test warranties that show up on the services match the post processing chosen",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Go with default packgae: Form 3L Complate Package\ncy.goToCustomizeStep(); //Go without any post processing chosen\ncy.log('Go without any post processing chosen'); //Deselect Form Wash L and Form Cure L bundle: Item display card number = 6\ncy.deselectItem('6');\ncy.goToServicePlanStep();\nvar servicePlan = _form_3l_complete_package.default.servicePlans;\ncy.checkForm3lServicePlan(servicePlan, 1); //Go back and only add Form Wash L and check plan prices\ncy.log('Go back and only add Form Wash L and check plan prices');\ncy.goToCustomizeStep();\ncy.selectItem('8');\ncy.goToServicePlanStep();\ncy.checkForm3lServicePlan(servicePlan, 1); //Go back and only add Form Cure L 120V and check plan prices\ncy.log('Go back and only add Form Cure L 120V and check plan prices');\ncy.goToCustomizeStep();\ncy.deselectItem('8');\ncy.selectItem('9');\ncy.goToServicePlanStep();\ncy.checkForm3lServicePlan(servicePlan, 1); //Go back and add both individual wash l & cure l\ncy.log('Go back and add both individual wash l & cure l');\ncy.goToCustomizeStep();\ncy.selectItem('8');\ncy.goToServicePlanStep();\ncy.checkForm3lServicePlan(servicePlan, 1); //Go back and just add the wash l & cure l bundle\ncy.log('Go back and just add the wash l & cure l bundle');\ncy.goToCustomizeStep();\ncy.deselectItem('8');\ncy.deselectItem('9');\ncy.selectItem('6');\ncy.goToServicePlanStep();\ncy.checkForm3lServicePlan(servicePlan, 1); //Go back and add one more Form 3L 3D printer check service plan prices are double\ncy.goToCustomizeStep();\ncy.increaseQuantity(1, 1); //Check that the number of rinse bucket v2’s that the user can add is set to the number of printers\ncy.get('input[aria-label=\"Set quantity\"]').eq(1).should('have.value', '2'); //Check that service plan prices match with number of printers\ncy.goToServicePlanStep();\ncy.checkForm3lServicePlan(servicePlan, 2);",
+              "err": {},
+              "uuid": "544a2c2a-2e66-497d-8013-61e4899dd28e",
+              "parentUUID": "9cf9c4d0-ebd2-4df4-9749-e59972ceca5c",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Test the Form 3L basic Package that default products are selected",
+              "fullTitle": "Form 3L configuration flow Test the Form 3L basic Package that default products are selected",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Go with Form 3L Basic Package\ncy.get('span').contains('Form 3L Basic Package').click();\ncy.goToCustomizeStep();\nvar product = _form_3l_complete_package.default.defaultSelectedProducts; //Check Form 3L 3D printer is selected\ncy.checkProductData(1, product[0].id, product[0].name, product[0].price, 1); //Check Form 3L resin tank v2 is selected\ncy.checkProductData(2, product[1].id, product[1].name, product[1].price, 1); //Check Form 3L Build Platform is selected\ncy.checkProductData(3, product[2].id, product[2].name, product[2].price, 1); //Check Form 3L Finish Kit: Cleaning Tools is selected\ncy.checkProductData(4, product[3].id, product[3].name, product[3].price, 1); //Check Form Wash L and Form Cure L Bundle is selected\ncy.checkProductData(6, product[4].id, product[4].name, product[4].price, 1);",
+              "err": {},
+              "uuid": "38bee7f4-986c-4142-8692-0b0d2fa8e5f8",
+              "parentUUID": "9cf9c4d0-ebd2-4df4-9749-e59972ceca5c",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4cceae74-daba-4c78-a297-799aeaa0a46a"
+          ],
+          "pending": [],
+          "skipped": [
+            "544a2c2a-2e66-497d-8013-61e4899dd28e",
+            "38bee7f4-986c-4142-8692-0b0d2fa8e5f8"
+          ],
+          "duration": 43,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-10T13:44:28.745Z",
+    "end": "2022-02-10T13:45:17.686Z",
+    "duration": 48941,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "469b3912-5209-411c-ac83-25070510379c",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/simple/simple_tests.js",
+      "file": "cypress/integration/formlabs/simple/simple_tests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7d28854e-41d5-4e3a-bb90-b137a9b9cd06",
+          "title": "General simple Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Formlabs top pages have no Application Error",
+              "fullTitle": "General simple Tests Test Formlabs top pages have no Application Error",
+              "timedOut": null,
+              "duration": 43144,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const corePages = ['/', '/3d-printers/', '/materials/', '/materials/', '/store/', '/blog/'];\ncorePages.forEach(page => {\n  cy.visit(`${Cypress.env('HOST')}${page}`);\n  cy.get('body').should('not.contain.text', 'Application error: a client-side exception has occurred');\n  cy.title().should('not.eq', 'Page Not Found');\n  cy.task('log', `Formlabs - ${Cypress.env('HOST')}${page} finised loading`);\n});",
+              "err": {},
+              "uuid": "1456cd2b-b7eb-4a34-a893-8b6f1db7f8c3",
+              "parentUUID": "7d28854e-41d5-4e3a-bb90-b137a9b9cd06",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1456cd2b-b7eb-4a34-a893-8b6f1db7f8c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43144,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

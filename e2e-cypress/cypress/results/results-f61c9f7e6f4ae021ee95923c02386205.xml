@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="63.8140" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-08T09:48:47" tests="0" file="cypress/integration/formlabs/search/search_on_site_desktop.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop" timestamp="2022-02-08T09:48:47" tests="6" time="63.8140" failures="0">
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel" time="14.9420" classname="TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: ): Test popular searches populate search input field" time="10.0820" classname="TC4.2 : (Country Code: ): Test popular searches populate search input field">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: ): Test search closes when navigating to a result" time="8.6820" classname="TC4.3 : (Country Code: ): Test search closes when navigating to a result">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query" time="9.2760" classname="TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: ): Test results for SKU number query" time="10.8660" classname="TC4.5 : (Country Code: ): Test results for SKU number query">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: ): Test results for Gibberish query" time="9.9660" classname="TC4.6 : (Country Code: ): Test results for Gibberish query">
+    </testcase>
+  </testsuite>
+</testsuites>

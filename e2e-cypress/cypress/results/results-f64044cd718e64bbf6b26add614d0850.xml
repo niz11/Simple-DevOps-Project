@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="21.2550" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-08T10:28:32" tests="0" file="cypress/integration/formlabs/shared/header_menu_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Header menu: Desktop " timestamp="2022-02-08T10:28:32" tests="1" time="21.2550" failures="0">
+    <testcase name="Header menu: Desktop  TC7.1 Tests Desktop header menu" time="21.2550" classname="TC7.1 Tests Desktop header menu">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,18 @@
+{
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 2
+  },
+  "blockHosts": "*.drift.com",
+  "reporter": "mocha-multi-reporters",
+  "reporterOptions": {
+    "configFile": "cypress-reporters.json"
+  },
+  "env": {
+    "failOnSnapshotDiff": false
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-19T15:40:29.285Z",
+    "end": "2022-01-19T15:40:53.637Z",
+    "duration": 24352,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "58d890ab-ded4-466b-b66e-6dc52e72c1a4",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shared/top_pages_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shared/top_pages_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d788479-5792-4503-8746-992ae7ec222d",
+          "title": "Tests top pages",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Dental top page are Application Error free and links are not broken",
+              "fullTitle": "Tests top pages Test Dental top page are Application Error free and links are not broken",
+              "timedOut": null,
+              "duration": 21305,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const dentalPages = ['/products/', '/products/form-3b/', '/products/form-3bl/', '/post-processing/', '/software/', '/services/', '/materials/'];\nif (Cypress.env('HOST').includes('staging')) {\n  cy.visit('https://dental-staging.formlabs.com/');\n} else {\n  cy.visit('https://dental.formlabs.com/');\n}\ndentalPages.forEach(page => {\n  cy.get('a[href=\"/products/\"]').eq(0).trigger('mouseover');\n  cy.get('a[href=\"' + page + '\"]').invoke('removeAttr', 'target').click({\n    multiple: true,\n    force: true\n  });\n  cy.get('body').should('not.contain.text', 'Application error: a client-side exception has occurred');\n});",
+              "err": {},
+              "uuid": "cf6cb820-a6bf-4ae8-bf16-da68b2d97cef",
+              "parentUUID": "9d788479-5792-4503-8746-992ae7ec222d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cf6cb820-a6bf-4ae8-bf16-da68b2d97cef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

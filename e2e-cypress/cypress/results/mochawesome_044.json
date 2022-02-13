@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-09T08:09:26.152Z",
+    "end": "2022-02-09T08:09:26.383Z",
+    "duration": 231,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0fadfb0f-5fc9-495a-a90e-3ae86e18e285",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js",
+      "file": "cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35ade8ff-4626-41a0-88a2-272f962d7878",
+          "title": "ROI Calculator: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC6.1 Test one path and final report",
+              "fullTitle": "ROI Calculator: Desktop TC6.1 Test one path and final report",
+              "timedOut": null,
+              "duration": 57,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/roi'); //Select industry\ncy.get('img[alt=\"Manufacturing\"]').click();\ncy.get('span').contains('Continue').click(); //Select printer\ncy.get('img[alt=\"Form 3L\"]').click();\ncy.get('span').contains('Continue').click(); //Select Part\ncy.get('img[alt=\"Enclosure\"]').click();\ncy.get('span').contains('Continue').click(); //Continue with default production need values\ncy.get('span').contains('Continue').click(); //Change values at last step\ncy.get('#industries').select('Engineering');\ncy.get('#printers').select('Fuse 1');\ncy.get('#parts').select('Bike Pedals');\ncy.get('img[alt=\"Bike Pedals\"]').should('be.visible');\ncy.get('#production-parts').type('{leftarrow}1');\ncy.get('#production-time').select('week');\ncy.get('#production-cost').type('{backspace}{backspace}{rightarrow}5'); //Fill form to see Your Complete Report\ncy.fixture('user_data').then(user => {\n  cy.get('#ROI_Calculator_text_FirstName').type(user.firstName);\n  cy.get('#ROI_Calculator_text_LastName').type(user.lastName);\n  cy.get('#ROI_Calculator_email_Email').type(user.email);\n  cy.get('input[aria-label=\"Phone\"]').type(user.mobNumber);\n  cy.get('#ROI_Calculator_text_Company').type(user.company);\n  cy.get('#ROI_Calculator_countryAndUsState_Country').select('Germany');\n  cy.get('select[id^=\"ROI_Calculator_occupation_How_would_you_describe_yourself\"]').select('Engineer');\n  cy.get('button[form=\"form_ROI_Calculator\"]').click();\n}); //Verify parts per year and per month calculations\ncy.get('span').contains('Parts Per Year').siblings().should('contain', '780');\ncy.get('span').contains('Parts Per Month').siblings().should('contain', '65'); //Verify Cost per Part Depending on Production Rate calculations and graph are visible\ncy.get('span').contains('Cost per Part').siblings().should('contain', '16');\ncy.get('svg#costPerPart').should('be.visible'); //Compare to Alternatives\n//Outsourcing (Benchmark)\ncy.get('svg#costOverTime').should('be.visible'); //Verify graphs for Outsourced Production & In-House Alternative are visible\ncy.get('button').contains('Outsourced Production').click();\ncy.get('svg#costOverTime').should('be.visible'); //Verify Costs per Part Breakdown Table is visible\ncy.get('div[class^=\"CostBreakdownTable\"]').should('be.visible'); //Verify Production Time for a Single Part graph is visible\ncy.get('div[class^=\"LeadTimesGraph\"]').should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/roi\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/roi\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/roi\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/roi\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/roi_calculator/roi_calculator_desktop_spec.js:101:8)",
+                "diff": null
+              },
+              "uuid": "f37b8ecd-64e1-4c38-af9d-93f022b7b9d1",
+              "parentUUID": "35ade8ff-4626-41a0-88a2-272f962d7878",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f37b8ecd-64e1-4c38-af9d-93f022b7b9d1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 57,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

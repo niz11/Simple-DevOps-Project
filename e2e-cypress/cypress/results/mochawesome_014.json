@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-08T09:48:47.499Z",
+    "end": "2022-02-08T09:49:54.375Z",
+    "duration": 66876,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "db0f0fad-16dd-481c-9df5-6ce2707aff53",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/search/search_on_site_desktop.js",
+      "file": "cypress/integration/formlabs/search/search_on_site_desktop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+          "title": "Search on US, UK, EU, DE, ES, FR & IT: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel",
+              "timedOut": null,
+              "duration": 14942,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Verify Search icon is visible on navigation bar & click\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Verify search panel open on search-icon click\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('be.visible').within(() => {\n  // Verify that formlabs logo is visible\n  cy.get('img[alt= \"' + country.logoAlt + '\"]').should('be.visible'); //Verify that search-icon is visible on seaerch bar\n  cy.get('.fl-v2-fl-search').should('be.visible'); // Get search input and verify that it has required placeholder\n  cy.get('input[class^=\"SearchBox_search-box\"]').should('be.visible').should('have.attr', 'placeholder', country.searchBoxPlaceholder); // Verify that “x” icon does not exist for empty search field\n  cy.get('.fl-v2-fl-exit').should('not.exist'); // Get search input, type 3 characters and verify “x” icon appears\n  cy.get('input[class^=\"SearchBox_search-box\"]').type('for');\n  cy.get('.fl-v2-fl-exit').should('be.visible'); // Verify “x” clears search input field\n  cy.get('.fl-v2-fl-exit').click();\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');\n}); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Get CANCEL button, should be visible and verify that it closes Search panel\ncy.get('button[class^=\"SearchBox_close\"]').should('be.visible').click();\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('not.exist');",
+              "err": {},
+              "uuid": "c7d5eae1-e5fe-4946-9d8c-5f2c5c489d1c",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.2 : (Country Code: ): Test popular searches populate search input field",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.2 : (Country Code: ): Test popular searches populate search input field",
+              "timedOut": null,
+              "duration": 10082,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get popular search terms and select/click second term\ncy.get('p > button[class^=\"SearchBox_animated\"]').eq(1).click().invoke('text').then(searchQuery => {\n  // Verify that search input value has been updated with the selected term\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('eq', searchQuery); // Verify that heading 'Search Results for \"<Search Query>\"' contain selected term\n  cy.get('#search-results > h4').should('be.visible').and('contain', searchQuery);\n}); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {},
+              "uuid": "47e479d7-f1e9-43bf-8834-5676380aacd4",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.3 : (Country Code: ): Test search closes when navigating to a result",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.3 : (Country Code: ): Test search closes when navigating to a result",
+              "timedOut": null,
+              "duration": 8682,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input, type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get search results and navigate to first result from pages\ncy.get('#search-results').siblings('div').eq(1).find('h5[class^=\"Header_headerText\"]').eq(0).click(); // Verify search box is closed when navigating to the result\ncy.wait(1000);\ncy.url().should('not.include', '/?search=');\ncy.get('div[class^=\"SearchBox_search-box\"]').should('not.exist');",
+              "err": {},
+              "uuid": "e936cc52-b5f2-4ffd-bbb8-15f76a13ab1c",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.4 : (Country Code: ): Test search results for \"Form 3\" query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.4 : (Country Code: ): Test search results for \"Form 3\" query",
+              "timedOut": null,
+              "duration": 9276,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'Form 3'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {},
+              "uuid": "b1076bec-004f-4aef-bb09-5e33bb89058a",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.5 : (Country Code: ): Test results for SKU number query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.5 : (Country Code: ): Test results for SKU number query",
+              "timedOut": null,
+              "duration": 10866,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('PKG-F3-SVC-BASI'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'PKG-F3-SVC-BASI'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {},
+              "uuid": "d3b4b38f-9cc4-4abc-b286-91a88bf5ed91",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.6 : (Country Code: ): Test results for Gibberish query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.6 : (Country Code: ): Test results for Gibberish query",
+              "timedOut": null,
+              "duration": 9966,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type gibberish search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('agalkjfdglkjal;fsdg'); // Verify that heading 'Search Results for \"<Search Query>\"' does not exist\ncy.get('#search-results > h4').should('not.exist'); // Verify that there are no search results\ncy.get('#search-results').should('not.exist'); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Verify that no result found announcement banner is visible\ncy.get('div[class^=\"Announcement_content\"]').should('contain', country.noResultFoundText); // Verify that \"Reset your search\" button on announcement banner clears the search input field\ncy.get('button').contains(country.resetButtonText).click();\ncy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');",
+              "err": {},
+              "uuid": "e2d8c5ce-5e56-48c3-bb4e-86f17cefcaf1",
+              "parentUUID": "4549e717-eb5c-4ecc-bea7-2f594bb96626",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7d5eae1-e5fe-4946-9d8c-5f2c5c489d1c",
+            "47e479d7-f1e9-43bf-8834-5676380aacd4",
+            "e936cc52-b5f2-4ffd-bbb8-15f76a13ab1c",
+            "b1076bec-004f-4aef-bb09-5e33bb89058a",
+            "d3b4b38f-9cc4-4abc-b286-91a88bf5ed91",
+            "e2d8c5ce-5e56-48c3-bb4e-86f17cefcaf1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 63814,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

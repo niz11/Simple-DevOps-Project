@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="39.5700" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-08T15:21:25" tests="0" file="cypress/integration/formlabs/shared/top_pages_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Tests top pages" timestamp="2022-02-08T15:21:25" tests="2" time="39.5700" failures="0">
+    <testcase name="Tests top pages Test Formlabs top page are Application Error free and links are not broken" time="24.0900" classname="Test Formlabs top page are Application Error free and links are not broken">
+    </testcase>
+    <testcase name="Tests top pages Test Dental top page are Application Error free and links are not broken" time="15.4800" classname="Test Dental top page are Application Error free and links are not broken">
+    </testcase>
+  </testsuite>
+</testsuites>

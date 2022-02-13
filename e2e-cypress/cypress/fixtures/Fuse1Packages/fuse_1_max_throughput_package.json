@@ -1,0 +1,75 @@
+{
+  "defaultSelectedProducts": [
+    {
+      "id": "7001648",
+      "name": "Fuse 1 Printer 120V",
+      "quantity": "2",
+      "price": 15400
+    },
+    {
+      "id": "7001701",
+      "name": "Fuse 1 Build Chamber 120V",
+      "quantity": "1",
+      "price": 3099
+    },
+    {
+      "id": "7001650",
+      "name": "Fuse 1 Build Chamber 120V",
+      "quantity": "1",
+      "price": 3499
+    },
+    {
+      "id": "7001703",
+      "name": "Fuse 1 Powder Cartridge",
+      "quantity": "2",
+      "price": 149
+    },
+    {
+      "id": "7001702",
+      "name": "Fuse 1 Printer Stand",
+      "quantity": "1",
+      "price": 299
+    },
+    {
+      "id": "7001653",
+      "name": "Nylon 12 Powder 6 kg",
+      "quantity": "4",
+      "price": 599
+    },
+    {
+      "id": "7001654",
+      "name": "Fuse Sift 120V",
+      "quantity": "1",
+      "price": 8999
+    }
+  ], 
+ "fuseAndShiftPremiumServicePlans": [
+     {
+         "name": "Fuse and Sift Premium Service 1 Year",
+         "price": 9000
+     },
+     {
+        "name": "Fuse and Sift Premium Service 2 Years",
+        "price": 18720
+    },
+     {
+        "name": "Fuse and Sift Premium Service 3 Years",
+        "price": 27710
+    }
+ ],
+ "fusePremiumServicePlans":[
+     {
+         "name": "Fuse Premium Service 1 Year",
+         "price": 7000
+     },
+     {
+        "id": "7001804",
+        "name": "Fuse Premium Service 2 Years",
+        "price": 16200
+    },
+    {
+        "name": "Fuse Premium Service 3 Years",
+        "price": 24650
+    }
+ ]
+}

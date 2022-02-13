@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="87.0770" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-08T09:36:13" tests="0" file="cypress/integration/formlabs/search/search_on_site_desktop.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop" timestamp="2022-02-08T09:36:13" tests="6" time="87.0770" failures="0">
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel" time="12.3020" classname="TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: ): Test popular searches populate search input field" time="9.9960" classname="TC4.2 : (Country Code: ): Test popular searches populate search input field">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: ): Test search closes when navigating to a result" time="10.9330" classname="TC4.3 : (Country Code: ): Test search closes when navigating to a result">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query" time="15.8600" classname="TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: ): Test results for SKU number query" time="26.7260" classname="TC4.5 : (Country Code: ): Test results for SKU number query">
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: ): Test results for Gibberish query" time="11.2600" classname="TC4.6 : (Country Code: ): Test results for Gibberish query">
+    </testcase>
+  </testsuite>
+</testsuites>

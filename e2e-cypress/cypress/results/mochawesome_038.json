@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-02-09T08:08:37.134Z",
+    "end": "2022-02-09T08:08:37.581Z",
+    "duration": 447,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f9af966-8e5b-4cb4-83db-20026648a0e7",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shop/checkout_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shop/checkout_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0d099ef-02e3-4e1f-bc1d-814fbf637e11",
+          "title": "Checkout: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC2.1 add an item to cart as guest and verify cart contains that item",
+              "fullTitle": "Checkout: Desktop TC2.1 add an item to cart as guest and verify cart contains that item",
+              "timedOut": null,
+              "duration": 55,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.addMaterialToCart('ibt-resin'); //visit checkout page to check cart items\ncy.get('span').contains('Checkout').click(); //verify the url\ncy.url().should('contain', '/checkout/cart?cartId='); //verify cart contains IBT Resin item\ncy.get('.product-item-name > a').should('contain', 'IBT Resin');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/support/index.js:232:6)",
+                "diff": null
+              },
+              "uuid": "6aeb6881-b97a-4b51-92c5-5c7e4dc47282",
+              "parentUUID": "d0d099ef-02e3-4e1f-bc1d-814fbf637e11",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2.2 Tests new user checkout flow with Credit or Debit Card payment method",
+              "fullTitle": "Checkout: Desktop TC2.2 Tests new user checkout flow with Credit or Debit Card payment method",
+              "timedOut": null,
+              "duration": 60,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.addMaterialToCart('ibt-resin'); //Visit checkout page to check cart items\ncy.get('span').contains('Checkout').click(); //Take screenshot for visual testing\ncy.get('#maincontent').matchImageSnapshot('1-my-cart-v1');\ncy.get('.cart-summary > .primary-button > span').click(); //Verify the url\ncy.url().should('contain', 'account/login/'); //Take screenshot for visual testing\ncy.get('.create-account-container').matchImageSnapshot('2-create-account-form-v1');\ncy.get('.block-customer-login').matchImageSnapshot('3-login-form-v1');\ncy.fixture('user_data').then(user => {\n  cy.generateRandomString(8).then(randomString => {\n    //Create new User Account\n    cy.createAccount(randomString + '@formlabs.com', user.firstName, user.lastName, randomString, user.password);\n  });\n  cy.wait(30000); //Take screenshot for visual testing\n  cy.get('#shipping').matchImageSnapshot('4-shipping-address-form-v1');\n  cy.get('#opc-shipping_method').matchImageSnapshot('5-shipping-methods-v1'); //Enter data on shipping address form\n  cy.get('.form[class=\"form form-shipping-address\"]').within(() => {\n    cy.get('input[name=\"street[0]\"]').type(user.street);\n    cy.get('input[name=\"city\"]').type(user.city);\n    cy.get('select[name=\"region_id\"]').select('California');\n    cy.get('input[name=\"postcode\"]').type(user.postalCode);\n    cy.get('input[name=\"telephone\"]').type(user.mobNumber);\n  });\n  cy.wait(5000); //Select Shipping Methods and continue to Payment\n  cy.get('.form[id=\"co-shipping-method-form\"]').within(() => {\n    cy.get('input[type=\"radio\"]').first().check({\n      force: true\n    });\n    cy.get('span').contains('Continue To Payment').click();\n  });\n  cy.wait(7000); //Verify url contains 'payment'\n  cy.url().should('contain', 'payment');\n  cy.get('.loader > img', {\n    timeout: 10000\n  }).should('not.visible'); //Take screenshot for visual testing\n  cy.get('#co-payment-form').matchImageSnapshot('6-payment-methods-v1');\n  cy.get('.opc-block-summary').matchImageSnapshot('7-order-summary-v1'); //Tests Credit or Debit Card payment method on all env except production\n  cy.url().then($url => {\n    if ($url.includes('integration')) {\n      //Select Credit or Debit Card payment method\n      cy.get('.form[id=\"co-payment-form\"]').within(() => {\n        cy.get('input[type=\"radio\"]').first().check({\n          force: true\n        });\n        cy.wait(2000);\n        cy.fixture('credit_card_data').then(card => {\n          //Enter card number\n          getIframeBody('iframe[title=\"Secure card number input frame\"]').find('input[name=\"cardnumber\"]').type(card.cardNumber); //Enter card expiry date\n          getIframeBody('iframe[title=\"Secure expiration date input frame\"]').find('input[name=\"exp-date\"]').type(card.expDate); //Enter CVC code\n          getIframeBody('iframe[title=\"Secure CVC input frame\"]').find('input[name=\"cvc\"]').type(card.cvv);\n        }); //Click button to Place order\n        cy.get('#actions-toolbar > div.primary').click();\n        cy.wait(20000); //Verify that user is on 'Success Page'\n        cy.url().should('contain', 'success');\n        cy.wait(5000);\n        cy.title().should('contain', 'Success Page');\n      });\n    } else {\n      cy.log('Can not test payment method on production env');\n    }\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/support/index.js:232:6)",
+                "diff": null
+              },
+              "uuid": "8e727c5e-e297-4005-bfd6-8eae39d9d6fb",
+              "parentUUID": "d0d099ef-02e3-4e1f-bc1d-814fbf637e11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6aeb6881-b97a-4b51-92c5-5c7e4dc47282",
+            "8e727c5e-e297-4005-bfd6-8eae39d9d6fb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 115,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

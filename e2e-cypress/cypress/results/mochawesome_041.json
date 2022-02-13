@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-09T08:08:42.518Z",
+    "end": "2022-02-09T08:08:42.704Z",
+    "duration": 186,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c61abd0f-b399-4c57-96df-6a259b7ce30e",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/user/user_account_desktop_spec.js",
+      "file": "cypress/integration/formlabs/user/user_account_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a70b65c-1c8b-4483-8e6c-5800eacce76e",
+          "title": "User account: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC3.1 Tests new user account creation flow",
+              "fullTitle": "User account: Desktop TC3.1 Tests new user account creation flow",
+              "timedOut": null,
+              "duration": 31,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Open cart to visit signin page\ncy.get('.fl-v2-fl-shopping_cart').click(); //Visit Sign in/ Sign up page\ncy.get('a').contains('Sign In to Your Account').click(); //Verify the url\ncy.url().should('contain', 'account/login/');\ncy.fixture('user_data').then(user => {\n  cy.generateRandomString(8).then(randomString => {\n    //Create new User Account\n    cy.createAccount(randomString + '@formlabs.com', user.firstName, user.lastName, randomString, user.password);\n  }); //Verify that after account creation user is on \"My account\" page\n  cy.get('.block-dashboard-info > .block-title > strong').should('contain', 'Account Information');\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at Context.visit (http://localhost:51210/__cypress/runner/cypress_runner.js:155705:78)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/user/user_account_desktop_spec.js:101:6)",
+                "diff": null
+              },
+              "uuid": "b028446d-9cdd-4542-b008-d8ef691be813",
+              "parentUUID": "1a70b65c-1c8b-4483-8e6c-5800eacce76e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC3.2 Tests customer login & logout through the signin drop down",
+              "fullTitle": "User account: Desktop TC3.2 Tests customer login & logout through the signin drop down",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[title=\"Sign In\"]').trigger('mouseover');\ncy.fixture('user_data').then(user => {\n  //Enter login credentials to login\n  cy.get('#username').type(user.email);\n  cy.get('#password').type(user.password);\n  cy.get('[value=\"Log In\"]').click();\n  cy.wait(3000); //Varify that customer is logged in\n  cy.contains('FL').should('be.visible'); //Logout customer\n  cy.get('span').contains('FL').trigger('mouseover');\n  cy.get('span').contains('Sign Out').click(); //Varify that Customer is logged out\n  cy.get('[title=\"Sign In\"]').should('have.class', 'fl-v2-fl-user');\n});",
+              "err": {},
+              "uuid": "6f046de9-fa66-46e7-9a3f-8474eb6b5e9a",
+              "parentUUID": "1a70b65c-1c8b-4483-8e6c-5800eacce76e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC3.3 Tests customer login through Cart page & logout through My Account page",
+              "fullTitle": "User account: Desktop TC3.3 Tests customer login through Cart page & logout through My Account page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Open cart to visit signin page\ncy.get('.fl-v2-fl-shopping_cart').click(); //Visit Sign in/ Sign up page\ncy.get('a').contains('Sign In to Your Account').click(); //Enter login credentials to login\ncy.fixture('user_data').then(user => {\n  cy.get('#email').type(user.email);\n  cy.get('#pass').type(user.password);\n  cy.get('#send2').click();\n  cy.wait(5000); //Verify that customer is logged in and on \"My account\" page\n  cy.get('.block-dashboard-info > .block-title > strong').should('contain', 'Account Information'); //Logout customer\n  cy.get('.customer-name').click();\n  cy.get('a').contains('Sign Out').click(); //Varify that Customer is logged out\n  cy.url().should('contain', 'logoutSuccess');\n});",
+              "err": {},
+              "uuid": "d9077788-b53e-4973-a48c-0d4de45eecd1",
+              "parentUUID": "1a70b65c-1c8b-4483-8e6c-5800eacce76e",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC3.4 Tests account password reset flow",
+              "fullTitle": "User account: Desktop TC3.4 Tests account password reset flow",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/dashboard/#forgot-password/request'); //Enter email to reset password\ncy.get('input[name=\"email\"]').type('web-service@formlabs.com');\ncy.get('input[type=\"submit\"]').click(); //Wait and get password reset email from gmail\ncy.wait(6000);\ncy.task('gmail:get-messages', {\n  options: {\n    from: 'Dashboard+no-reply@formlabs.com',\n    subject: 'Reset your password',\n    include_body: true\n  }\n}).then(emails => {\n  assert.isAtLeast(emails.length, 1, 'Expected to find at least one email, but none were found!'); //Get password reset link from email\n  const email = emails[0].body.html;\n  const regex = /https:\\/\\/formlabs.com\\/dashboard\\/#forgot-password\\/.+?(?=<\\/p>)/g;\n  const url = email.match(regex)[0]; //Visit link to reset password\n  cy.visit(url);\n  cy.generateRandomString(8).then(randomString => {\n    const password = randomString;\n    cy.get('#new_password_textfield').type(password);\n    cy.get('#new_password_repeat_textfield').type(password);\n    cy.get('.js-submit').click();\n    cy.get('.alert-message').should('contain', 'Your password has been updated, you can use it'); //Verify that new password works\n    cy.get('#login-email_field').type('web-service@formlabs.com', {\n      force: true\n    });\n    cy.get('#login-passwd_field').type(password, {\n      force: true\n    });\n    cy.get('#login-submit').click({\n      force: true\n    });\n    cy.get('div').should('contain', 'Welcome to Dashboard!');\n  });\n});",
+              "err": {},
+              "uuid": "c05b7f34-56da-43e2-8f4c-0c12bc071fae",
+              "parentUUID": "1a70b65c-1c8b-4483-8e6c-5800eacce76e",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b028446d-9cdd-4542-b008-d8ef691be813"
+          ],
+          "pending": [],
+          "skipped": [
+            "6f046de9-fa66-46e7-9a3f-8474eb6b5e9a",
+            "d9077788-b53e-4973-a48c-0d4de45eecd1",
+            "c05b7f34-56da-43e2-8f4c-0c12bc071fae"
+          ],
+          "duration": 31,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

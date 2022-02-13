@@ -1,0 +1,49 @@
+{
+    "defaultSelectedProducts": [
+      {
+        "id": "7002260",
+        "name": "Form 3L 3D Printer",
+        "quantity": "1",
+        "price": 9999
+      },
+      {
+        "id": "7002261",
+        "name": "Form 3L Resin Tank V2",
+        "quantity": "1",
+        "price": 299
+      },
+      {
+        "id": "7002263",
+        "name": "Form 3L Build Platform",
+        "quantity": "1",
+        "price": 349
+      },
+      {
+        "id": "7002262",
+        "name": "Form 3L Finish Kit: Cleaning Tools",
+        "quantity": "1",
+        "price": 63
+      },
+      {
+        "id": "7002266",
+        "name": "Form Wash L and Form Cure L Bundle",
+        "quantity": "1",
+        "price": 5689
+      }
+    ], 
+   "servicePlans": [
+       {
+           "name": "Form 3L Pro Service Plan 1 Year",
+           "price": 1000
+       },
+       {
+          "name": "Form 3L Pro Service Plan 2 Years",
+          "price": 3500
+      },
+       {
+          "name": "Form 3L Pro Service Plan 3 Years",
+          "price": 5000
+      }
+   ]
+  }
+  

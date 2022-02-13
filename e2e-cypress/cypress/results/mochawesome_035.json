@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-02-09T08:08:31.884Z",
+    "end": "2022-02-09T08:08:32.584Z",
+    "duration": 700,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aab409cd-b7ec-4c51-9a43-ef7d4f2ab3c4",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shared/country_switching_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shared/country_switching_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c4dc41d-df5c-40b6-af0b-19597941fe84",
+          "title": "Country Switching: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC8.1 Tests country switching through Region Bar ",
+              "fullTitle": "Country Switching: Desktop TC8.1 Tests country switching through Region Bar ",
+              "timedOut": null,
+              "duration": 89,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Set ipcountry Cookie and visit Spain domain\ncy.setCookie('ipcountry', 'US');\ncy.visit(Cypress.env('HOST') + '/es/'); //Verify store_view cookie value\ncy.getCookie('store_view').should('have.property', 'value', 'es_es');\ncy.getCookie('ipcountry').should('have.property', 'value', 'US'); //From region bar change region to Germany\ncy.get('div[class^=\"RegionBar_bar\"]').should('be.visible').within(() => {\n  cy.get('select').select('DE');\n  cy.get('button').eq(0).click();\n  cy.wait(7000); //Verify store_view cookie value and domain is according to selected region\n  cy.url().should('contain', 'de');\n  cy.getCookie('store_view').should('have.property', 'value', 'de_de');\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/es/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/es/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/shared/country_switching_desktop_spec.js:103:8)",
+                "diff": null
+              },
+              "uuid": "5575e0b9-c259-47f5-8d7f-f44c2bc0df21",
+              "parentUUID": "9c4dc41d-df5c-40b6-af0b-19597941fe84",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC8.2 Tests country switching from header menu",
+              "fullTitle": "Country Switching: Desktop TC8.2 Tests country switching from header menu",
+              "timedOut": null,
+              "duration": 55,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Visit Spain domain\ncy.visit(Cypress.env('HOST') + '/es/'); //Verify store_view cookie value\ncy.getCookie('store_view').should('have.property', 'value', 'es_es'); //From header menu change region to Germany\ncy.get('div[title=\"Change Region\"]').click();\ncy.get('div[class^=\"CenterModal_modal\"]').should('be.visible').within(() => {\n  cy.get('span').contains('Germany').click();\n});\ncy.wait(7000); //Verify store_view cookie value and domain is according to selected region\ncy.url().should('contain', 'de');\ncy.getCookie('store_view').should('have.property', 'value', 'de_de');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/es/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/es/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/shared/country_switching_desktop_spec.js:119:8)",
+                "diff": null
+              },
+              "uuid": "0f1d556e-2a4a-4c2a-99dc-275bdce6378a",
+              "parentUUID": "9c4dc41d-df5c-40b6-af0b-19597941fe84",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC8.3 Tests country switching in checkout",
+              "fullTitle": "Country Switching: Desktop TC8.3 Tests country switching in checkout",
+              "timedOut": null,
+              "duration": 58,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Visit IBT Resin material item page\ncy.visit(Cypress.env('HOST') + '/store/materials/ibt-resin/'); //Add to cart IBT Resin\ncy.get('span').contains('Buy Now').click();\ncy.wait(5000); //Visit checkout page to check cart items\ncy.get('span').contains('Checkout').click(); //Verify the url\ncy.url().should('contain', '/checkout/cart'); //Verify cart contains IBT Resin item\ncy.get('.product-item-name > a').should('contain', 'IBT Resin');\ncy.get('.cart-summary > .primary-button > span').click(); //Verify the url\ncy.url().should('contain', 'account/login/');\ncy.fixture('user_data').then(user => {\n  cy.generateRandomString(8).then(randomString => {\n    //Create new User Account\n    cy.createAccount(randomString + '@formlabs.com', user.firstName, user.lastName, randomString, user.password);\n  });\n  cy.wait(30000); //Verify store_view cookie value before country switching\n  cy.getCookie('store_view').should('have.property', 'value', 'us_en'); //On shipping address change country from United States to Germany\n  cy.get('.form[class=\"form form-shipping-address\"]').within(() => {\n    cy.get('input[name=\"postcode\"]').type('24106');\n    cy.get('select[name=\"country_id\"]').select('Germany').should('have.value', 'DE');\n  });\n  cy.wait(5000); //Verify store_view cookie value and domain is according to selected region\n  cy.url().should('contain', 'de_de');\n  cy.getCookie('store_view').should('have.property', 'value', 'de_de');\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nundefined/store/materials/ibt-resin/\n\nWe failed looking for this file at the path:\n\n/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/store/materials/ibt-resin/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156062:84\n    at visitFailedByErr (http://localhost:51210/__cypress/runner/cypress_runner.js:155437:12)\n    at http://localhost:51210/__cypress/runner/cypress_runner.js:156042:13\n    at tryCatcher (http://localhost:51210/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51210/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (http://localhost:51210/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (http://localhost:51210/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (http://localhost:51210/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (http://localhost:51210/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (http://localhost:51210/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (http://localhost:51210/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51210/__cypress/tests?p=cypress/integration/formlabs/shared/country_switching_desktop_spec.js:134:8)",
+                "diff": null
+              },
+              "uuid": "1fd9ec8e-43e9-4e39-b00d-0d886f43155e",
+              "parentUUID": "9c4dc41d-df5c-40b6-af0b-19597941fe84",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5575e0b9-c259-47f5-8d7f-f44c2bc0df21",
+            "0f1d556e-2a4a-4c2a-99dc-275bdce6378a",
+            "1fd9ec8e-43e9-4e39-b00d-0d886f43155e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 202,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

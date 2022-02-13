@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-08T16:20:43.898Z",
+    "end": "2022-02-08T16:23:34.885Z",
+    "duration": 170987,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e0ea2a6-5be5-49b7-8371-fdb702b137ad",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/shop/checkout_desktop_spec.js",
+      "file": "cypress/integration/formlabs/shop/checkout_desktop_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e5ef86e9-0eb9-4873-a85e-f8e4de30316e",
+          "title": "Checkout: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC2.1 add an item to cart as guest and verify cart contains that item",
+              "fullTitle": "Checkout: Desktop TC2.1 add an item to cart as guest and verify cart contains that item",
+              "timedOut": null,
+              "duration": 27860,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addMaterialToCart('ibt-resin'); //visit checkout page to check cart items\ncy.get('span').contains('Checkout').click(); //verify the url\ncy.url().should('contain', '/checkout/cart?cartId='); //verify cart contains IBT Resin item\ncy.get('.product-item-name > a').should('contain', 'IBT Resin');",
+              "err": {},
+              "uuid": "2e5a0936-9b60-47df-8637-c399724e5d94",
+              "parentUUID": "e5ef86e9-0eb9-4873-a85e-f8e4de30316e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2.2 Tests new user checkout flow with Credit or Debit Card payment method",
+              "fullTitle": "Checkout: Desktop TC2.2 Tests new user checkout flow with Credit or Debit Card payment method",
+              "timedOut": null,
+              "duration": 139137,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addMaterialToCart('ibt-resin'); //Visit checkout page to check cart items\ncy.get('span').contains('Checkout').click(); //Take screenshot for visual testing\ncy.get('#maincontent').matchImageSnapshot('1-my-cart-v1');\ncy.get('.cart-summary > .primary-button > span').click(); //Verify the url\ncy.url().should('contain', 'account/login/'); //Take screenshot for visual testing\ncy.get('.create-account-container').matchImageSnapshot('2-create-account-form-v1');\ncy.get('.block-customer-login').matchImageSnapshot('3-login-form-v1');\ncy.fixture('user_data').then(user => {\n  cy.generateRandomString(8).then(randomString => {\n    //Create new User Account\n    cy.createAccount(randomString + '@formlabs.com', user.firstName, user.lastName, randomString, user.password);\n  });\n  cy.wait(30000); //Take screenshot for visual testing\n  cy.get('#shipping').matchImageSnapshot('4-shipping-address-form-v1');\n  cy.get('#opc-shipping_method').matchImageSnapshot('5-shipping-methods-v1'); //Enter data on shipping address form\n  cy.get('.form[class=\"form form-shipping-address\"]').within(() => {\n    cy.get('input[name=\"street[0]\"]').type(user.street);\n    cy.get('input[name=\"city\"]').type(user.city);\n    cy.get('select[name=\"region_id\"]').select('California');\n    cy.get('input[name=\"postcode\"]').type(user.postalCode);\n    cy.get('input[name=\"telephone\"]').type(user.mobNumber);\n  });\n  cy.wait(5000); //Select Shipping Methods and continue to Payment\n  cy.get('.form[id=\"co-shipping-method-form\"]').within(() => {\n    cy.get('input[type=\"radio\"]').first().check({\n      force: true\n    });\n    cy.get('span').contains('Continue To Payment').click();\n  });\n  cy.wait(7000); //Verify url contains 'payment'\n  cy.url().should('contain', 'payment');\n  cy.get('.loader > img', {\n    timeout: 10000\n  }).should('not.visible'); //Take screenshot for visual testing\n  cy.get('#co-payment-form').matchImageSnapshot('6-payment-methods-v1');\n  cy.get('.opc-block-summary').matchImageSnapshot('7-order-summary-v1'); //Tests Credit or Debit Card payment method on all env except production\n  cy.url().then($url => {\n    if ($url.includes('integration')) {\n      //Select Credit or Debit Card payment method\n      cy.get('.form[id=\"co-payment-form\"]').within(() => {\n        cy.get('input[type=\"radio\"]').first().check({\n          force: true\n        });\n        cy.wait(2000);\n        cy.fixture('credit_card_data').then(card => {\n          //Enter card number\n          getIframeBody('iframe[title=\"Secure card number input frame\"]').find('input[name=\"cardnumber\"]').type(card.cardNumber); //Enter card expiry date\n          getIframeBody('iframe[title=\"Secure expiration date input frame\"]').find('input[name=\"exp-date\"]').type(card.expDate); //Enter CVC code\n          getIframeBody('iframe[title=\"Secure CVC input frame\"]').find('input[name=\"cvc\"]').type(card.cvv);\n        }); //Click button to Place order\n        cy.get('#actions-toolbar > div.primary').click();\n        cy.wait(20000); //Verify that user is on 'Success Page'\n        cy.url().should('contain', 'success');\n        cy.wait(5000);\n        cy.title().should('contain', 'Success Page');\n      });\n    } else {\n      cy.log('Can not test payment method on production env');\n    }\n  });\n});",
+              "err": {},
+              "uuid": "d3b518e9-8c61-4e48-a985-56b5a9d9e20f",
+              "parentUUID": "e5ef86e9-0eb9-4873-a85e-f8e4de30316e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e5a0936-9b60-47df-8637-c399724e5d94",
+            "d3b518e9-8c61-4e48-a985-56b5a9d9e20f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 166997,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

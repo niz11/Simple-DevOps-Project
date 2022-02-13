@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.7180" tests="42" failures="42">
+  <testsuite name="Root Suite" timestamp="2022-02-09T08:09:27" tests="0" file="cypress/integration/formlabs/search/search_on_site_desktop.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop" timestamp="2022-02-09T08:09:27" tests="42" time="4.7180" failures="42">
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel" time="0.0710" classname="TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: ): Test popular searches populate search input field" time="0.0500" classname="TC4.2 : (Country Code: ): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: ): Test search closes when navigating to a result" time="0.0550" classname="TC4.3 : (Country Code: ): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query" time="0.0550" classname="TC4.4 : (Country Code: ): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: ): Test results for SKU number query" time="0.0570" classname="TC4.5 : (Country Code: ): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: ): Test results for Gibberish query" time="0.0620" classname="TC4.6 : (Country Code: ): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: uk): Tests visibility of different elements on the search panel" time="0.0650" classname="TC4.1 : (Country Code: uk): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: uk): Test popular searches populate search input field" time="0.0700" classname="TC4.2 : (Country Code: uk): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: uk): Test search closes when navigating to a result" time="0.0680" classname="TC4.3 : (Country Code: uk): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: uk): Test search results for &quot;Form 3&quot; query" time="0.0760" classname="TC4.4 : (Country Code: uk): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: uk): Test results for SKU number query" time="0.0760" classname="TC4.5 : (Country Code: uk): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: uk): Test results for Gibberish query" time="0.0780" classname="TC4.6 : (Country Code: uk): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/uk
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/uk
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: eu): Tests visibility of different elements on the search panel" time="0.0860" classname="TC4.1 : (Country Code: eu): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: eu): Test popular searches populate search input field" time="0.0550" classname="TC4.2 : (Country Code: eu): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: eu): Test search closes when navigating to a result" time="0.0890" classname="TC4.3 : (Country Code: eu): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: eu): Test search results for &quot;Form 3&quot; query" time="0.0910" classname="TC4.4 : (Country Code: eu): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: eu): Test results for SKU number query" time="0.0970" classname="TC4.5 : (Country Code: eu): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: eu): Test results for Gibberish query" time="0.1020" classname="TC4.6 : (Country Code: eu): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/eu
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/eu
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: de): Tests visibility of different elements on the search panel" time="0.0670" classname="TC4.1 : (Country Code: de): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: de): Test popular searches populate search input field" time="0.1080" classname="TC4.2 : (Country Code: de): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: de): Test search closes when navigating to a result" time="0.0680" classname="TC4.3 : (Country Code: de): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: de): Test search results for &quot;Form 3&quot; query" time="0.1130" classname="TC4.4 : (Country Code: de): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: de): Test results for SKU number query" time="0.0730" classname="TC4.5 : (Country Code: de): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: de): Test results for Gibberish query" time="0.1320" classname="TC4.6 : (Country Code: de): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/de
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/de
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: es): Tests visibility of different elements on the search panel" time="0.1420" classname="TC4.1 : (Country Code: es): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: es): Test popular searches populate search input field" time="0.1430" classname="TC4.2 : (Country Code: es): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: es): Test search closes when navigating to a result" time="0.1470" classname="TC4.3 : (Country Code: es): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: es): Test search results for &quot;Form 3&quot; query" time="0.1530" classname="TC4.4 : (Country Code: es): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: es): Test results for SKU number query" time="0.1420" classname="TC4.5 : (Country Code: es): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: es): Test results for Gibberish query" time="0.1460" classname="TC4.6 : (Country Code: es): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/es
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/es
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: fr): Tests visibility of different elements on the search panel" time="0.1480" classname="TC4.1 : (Country Code: fr): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: fr): Test popular searches populate search input field" time="0.1520" classname="TC4.2 : (Country Code: fr): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: fr): Test search closes when navigating to a result" time="0.1550" classname="TC4.3 : (Country Code: fr): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: fr): Test search results for &quot;Form 3&quot; query" time="0.1580" classname="TC4.4 : (Country Code: fr): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: fr): Test results for SKU number query" time="0.0960" classname="TC4.5 : (Country Code: fr): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: fr): Test results for Gibberish query" time="0.1990" classname="TC4.6 : (Country Code: fr): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/fr
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/fr
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.1 : (Country Code: it): Tests visibility of different elements on the search panel" time="0.2000" classname="TC4.1 : (Country Code: it): Tests visibility of different elements on the search panel">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:115:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.2 : (Country Code: it): Test popular searches populate search input field" time="0.1800" classname="TC4.2 : (Country Code: it): Test popular searches populate search input field">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:143:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.3 : (Country Code: it): Test search closes when navigating to a result" time="0.1040" classname="TC4.3 : (Country Code: it): Test search closes when navigating to a result">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:157:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.4 : (Country Code: it): Test search results for &quot;Form 3&quot; query" time="0.1840" classname="TC4.4 : (Country Code: it): Test search results for &quot;Form 3&quot; query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:170:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.5 : (Country Code: it): Test results for SKU number query" time="0.2090" classname="TC4.5 : (Country Code: it): Test results for SKU number query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:181:10)]]></failure>
+    </testcase>
+    <testcase name="Search on US, UK, EU, DE, ES, FR &amp; IT: Desktop TC4.6 : (Country Code: it): Test results for Gibberish query" time="0.1960" classname="TC4.6 : (Country Code: it): Test results for Gibberish query">
+      <failure message="`cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  &gt; 404: Not Found" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+undefined/it
+
+We failed looking for this file at the path:
+
+/Users/nizangoldstein/Desktop/guillotine/static/formlabs-web/e2e-cypress/undefined/it
+
+The internal Cypress web server responded with:
+
+  > 404: Not Found
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156062:84
+    at visitFailedByErr (http://localhost:51292/__cypress/runner/cypress_runner.js:155437:12)
+    at http://localhost:51292/__cypress/runner/cypress_runner.js:156042:13
+    at tryCatcher (http://localhost:51292/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51292/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (http://localhost:51292/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (http://localhost:51292/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (http://localhost:51292/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (http://localhost:51292/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (http://localhost:51292/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (http://localhost:51292/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (http://localhost:51292/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:192:10)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

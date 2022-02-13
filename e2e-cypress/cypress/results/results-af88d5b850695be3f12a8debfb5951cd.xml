@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="166.9970" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-02-08T16:20:43" tests="0" file="cypress/integration/formlabs/shop/checkout_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Checkout: Desktop" timestamp="2022-02-08T16:20:43" tests="2" time="166.9970" failures="0">
+    <testcase name="Checkout: Desktop TC2.1 add an item to cart as guest and verify cart contains that item" time="27.8600" classname="TC2.1 add an item to cart as guest and verify cart contains that item">
+    </testcase>
+    <testcase name="Checkout: Desktop TC2.2 Tests new user checkout flow with Credit or Debit Card payment method" time="139.1370" classname="TC2.2 Tests new user checkout flow with Credit or Debit Card payment method">
+    </testcase>
+  </testsuite>
+</testsuites>

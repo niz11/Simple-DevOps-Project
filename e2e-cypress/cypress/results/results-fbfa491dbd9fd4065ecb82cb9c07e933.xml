@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.5940" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2022-02-08T10:25:41" tests="0" file="cypress/integration/formlabs/shared/header_menu_desktop_spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Header menu: Desktop " timestamp="2022-02-08T10:25:41" tests="1" time="13.5940" failures="1">
+    <testcase name="Header menu: Desktop  TC7.1 Tests Desktop header menu" time="13.5940" classname="TC7.1 Tests Desktop header menu">
+      <failure message="Timed out retrying after 4000ms: expected &apos;[ &lt;a.HeaderMenu_dropdown-left__QgXiy.HeaderMenu_selected-secondary__SQQGO&gt;, 6 more... ]&apos; to not have a length below 8" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '[ <a.HeaderMenu_dropdown-left__QgXiy.HeaderMenu_selected-secondary__SQQGO>, 6 more... ]' to not have a length below 8
+    at Context.eval (https://staging.formlabs.com/__cypress/tests?p=cypress/integration/formlabs/shared/header_menu_desktop_spec.js:130:103)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

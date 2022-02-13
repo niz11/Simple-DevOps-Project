@@ -1,0 +1,350 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 12,
+    "passes": 4,
+    "pending": 0,
+    "failures": 8,
+    "start": "2022-02-04T11:17:18.127Z",
+    "end": "2022-02-04T11:23:23.365Z",
+    "duration": 365238,
+    "testsRegistered": 12,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c7735c56-d567-423b-9f50-a5a103b7af2e",
+      "title": "",
+      "fullFile": "cypress/integration/formlabs/search/search_on_site_desktop.js",
+      "file": "cypress/integration/formlabs/search/search_on_site_desktop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+          "title": "Search on US, UK, EU, DE, ES, FR & IT: Desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.1 : (Country Code: ): Tests visibility of different elements on the search panel",
+              "timedOut": null,
+              "duration": 6808,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Verify Search icon is visible on navigation bar & click\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Verify search panel open on search-icon click\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('be.visible').within(() => {\n  // Verify that formlabs logo is visible\n  cy.get('img[alt= \"' + country.logoAlt + '\"]').should('be.visible'); //Verify that search-icon is visible on seaerch bar\n  cy.get('.fl-v2-fl-search').should('be.visible'); // Get search input and verify that it has required placeholder\n  cy.get('input[class^=\"SearchBox_search-box\"]').should('be.visible').should('have.attr', 'placeholder', country.searchBoxPlaceholder); // Verify that “x” icon does not exist for empty search field\n  cy.get('.fl-v2-fl-exit').should('not.exist'); // Get search input, type 3 characters and verify “x” icon appears\n  cy.get('input[class^=\"SearchBox_search-box\"]').type('for');\n  cy.get('.fl-v2-fl-exit').should('be.visible'); // Verify “x” clears search input field\n  cy.get('.fl-v2-fl-exit').click();\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');\n}); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Get CANCEL button, should be visible and verify that it closes Search panel\ncy.get('button[class^=\"SearchBox_close\"]').should('be.visible').click();\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('not.exist');",
+              "err": {},
+              "uuid": "e1c85099-1d52-40ca-8e93-7d56393ef58d",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.2 : (Country Code: ): Test popular searches populate search input field",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.2 : (Country Code: ): Test popular searches populate search input field",
+              "timedOut": null,
+              "duration": 10765,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get popular search terms and select/click second term\ncy.get('p > button[class^=\"SearchBox_animated\"]').eq(1).click().invoke('text').then(searchQuery => {\n  // Verify that search input value has been updated with the selected term\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('eq', searchQuery); // Verify that heading 'Search Results for \"<Search Query>\"' contain selected term\n  cy.get('#search-results > h4').should('be.visible').and('contain', searchQuery);\n}); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "18951ca8-dcd1-404a-80a6-e41039e73826",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.3 : (Country Code: ): Test search closes when navigating to a result",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.3 : (Country Code: ): Test search closes when navigating to a result",
+              "timedOut": null,
+              "duration": 5835,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input, type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get search results and navigate to first result from pages\n// cy.get('#search-results')\n//   .siblings('div')\n//   .eq(1)\n//   .find('h5[class^=\"Header_headertext\"]')\n//   .eq(0)\n//   .click();\n// Verify search box is closed when navigating to the result\ncy.wait(1000);\ncy.url().should('not.include', '/?search=');\ncy.get('div[class^=\"SearchBox_search-box\"]').should('not.exist');",
+              "err": {},
+              "uuid": "7ed1e0ee-24b5-4225-a089-85b68c7dd485",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.4 : (Country Code: ): Test search results for \"Form 3\" query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.4 : (Country Code: ): Test search results for \"Form 3\" query",
+              "timedOut": null,
+              "duration": 16196,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'Form 3'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "44ab61f8-b61f-4af7-b691-bc6e7858f3e1",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.5 : (Country Code: ): Test results for SKU number query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.5 : (Country Code: ): Test results for SKU number query",
+              "timedOut": null,
+              "duration": 27867,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('PKG-F3-SVC-BASI'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'PKG-F3-SVC-BASI'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "9ec31dc5-b760-48f1-8aec-bd56da7d91af",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.6 : (Country Code: ): Test results for Gibberish query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.6 : (Country Code: ): Test results for Gibberish query",
+              "timedOut": null,
+              "duration": 11485,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type gibberish search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('agalkjfdglkjal;fsdg'); // Verify that heading 'Search Results for \"<Search Query>\"' does not exist\ncy.get('#search-results > h4').should('not.exist'); // Verify that there are no search results\ncy.get('#search-results').should('not.exist'); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Verify that no result found announcement banner is visible\ncy.get('div[class^=\"Announcement_content\"]').should('contain', country.noResultFoundText); // Verify that \"Reset your search\" button on announcement banner clears the search input field\ncy.get('button').contains(country.resetButtonText).click();\ncy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `p > button[class^=\"SearchBox_animated\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `p > button[class^=\"SearchBox_animated\"]`, but never found it.\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:214:57)",
+                "diff": null
+              },
+              "uuid": "58903828-c11a-4684-a93e-18bbf3a9fb83",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.1 : (Country Code: uk): Tests visibility of different elements on the search panel",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.1 : (Country Code: uk): Tests visibility of different elements on the search panel",
+              "timedOut": null,
+              "duration": 4945,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Verify Search icon is visible on navigation bar & click\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Verify search panel open on search-icon click\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('be.visible').within(() => {\n  // Verify that formlabs logo is visible\n  cy.get('img[alt= \"' + country.logoAlt + '\"]').should('be.visible'); //Verify that search-icon is visible on seaerch bar\n  cy.get('.fl-v2-fl-search').should('be.visible'); // Get search input and verify that it has required placeholder\n  cy.get('input[class^=\"SearchBox_search-box\"]').should('be.visible').should('have.attr', 'placeholder', country.searchBoxPlaceholder); // Verify that “x” icon does not exist for empty search field\n  cy.get('.fl-v2-fl-exit').should('not.exist'); // Get search input, type 3 characters and verify “x” icon appears\n  cy.get('input[class^=\"SearchBox_search-box\"]').type('for');\n  cy.get('.fl-v2-fl-exit').should('be.visible'); // Verify “x” clears search input field\n  cy.get('.fl-v2-fl-exit').click();\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');\n}); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Get CANCEL button, should be visible and verify that it closes Search panel\ncy.get('button[class^=\"SearchBox_close\"]').should('be.visible').click();\ncy.get('div[class^=\"SearchBox_search-bar\"]').should('not.exist');",
+              "err": {},
+              "uuid": "f7687a20-b0cd-449c-a630-a3d40a1a3eec",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.2 : (Country Code: uk): Test popular searches populate search input field",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.2 : (Country Code: uk): Test popular searches populate search input field",
+              "timedOut": null,
+              "duration": 11206,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get popular search terms and select/click second term\ncy.get('p > button[class^=\"SearchBox_animated\"]').eq(1).click().invoke('text').then(searchQuery => {\n  // Verify that search input value has been updated with the selected term\n  cy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('eq', searchQuery); // Verify that heading 'Search Results for \"<Search Query>\"' contain selected term\n  cy.get('#search-results > h4').should('be.visible').and('contain', searchQuery);\n}); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "995a4555-d9cf-43a1-b026-4bf0664019c5",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.3 : (Country Code: uk): Test search closes when navigating to a result",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.3 : (Country Code: uk): Test search closes when navigating to a result",
+              "timedOut": null,
+              "duration": 5551,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input, type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get search results and navigate to first result from pages\n// cy.get('#search-results')\n//   .siblings('div')\n//   .eq(1)\n//   .find('h5[class^=\"Header_headertext\"]')\n//   .eq(0)\n//   .click();\n// Verify search box is closed when navigating to the result\ncy.wait(1000);\ncy.url().should('not.include', '/?search=');\ncy.get('div[class^=\"SearchBox_search-box\"]').should('not.exist');",
+              "err": {},
+              "uuid": "c5d058c4-f189-46dc-ba7c-fe1784c8ae68",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.4 : (Country Code: uk): Test search results for \"Form 3\" query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.4 : (Country Code: uk): Test search results for \"Form 3\" query",
+              "timedOut": null,
+              "duration": 11625,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('Form 3'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'Form 3'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "2604d9e1-5c87-4178-a2b0-e756481b95b0",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.5 : (Country Code: uk): Test results for SKU number query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.5 : (Country Code: uk): Test results for SKU number query",
+              "timedOut": null,
+              "duration": 12206,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('PKG-F3-SVC-BASI'); // Get 'Search Results for \"<Search Query>\"' heading and verify that it contains searched query\ncy.get('#search-results > h4').should('be.visible').and('contain', 'PKG-F3-SVC-BASI'); // Test all three main parts of search results: Products, Pages and Blog Posts\ncy.testValidSearchQueryResults(country.countryCode, country.shopURL, country.pagesResultHeading);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class^=\"Header_headertext\"]`, but never found it. Queried from element: <div.SearchBox_page-results___UuuZ>\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/support/index.js:195:73)",
+                "diff": null
+              },
+              "uuid": "9d641bb6-f9bb-4f61-9bc1-b0351f4b20e3",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4.6 : (Country Code: uk): Test results for Gibberish query",
+              "fullTitle": "Search on US, UK, EU, DE, ES, FR & IT: Desktop TC4.6 : (Country Code: uk): Test results for Gibberish query",
+              "timedOut": null,
+              "duration": 11823,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('HOST') + '/' + country.countryCode); // Open search panel\ncy.get('.fl-v2-fl-search').should('be.visible').click(); // Get search input and type gibberish search query\ncy.get('input[class^=\"SearchBox_search-box\"]').type('agalkjfdglkjal;fsdg'); // Verify that heading 'Search Results for \"<Search Query>\"' does not exist\ncy.get('#search-results > h4').should('not.exist'); // Verify that there are no search results\ncy.get('#search-results').should('not.exist'); // Verify that there is Popular Searches heading and there are 5 popular search terms\ncy.contains('Popular Searches').should('be.visible');\ncy.get('p > button[class^=\"SearchBox_animated\"]').should('have.length', '5').and('be.visible'); // Verify that no result found announcement banner is visible\ncy.get('div[class^=\"Announcement_content\"]').should('contain', country.noResultFoundText); // Verify that \"Reset your search\" button on announcement banner clears the search input field\ncy.get('button').contains(country.resetButtonText).click();\ncy.get('input[class^=\"SearchBox_search-box\"]').invoke('val').should('be.empty');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `p > button[class^=\"SearchBox_animated\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `p > button[class^=\"SearchBox_animated\"]`, but never found it.\n    at Context.eval (https://formlabs.com/__cypress/tests?p=cypress/integration/formlabs/search/search_on_site_desktop.js:214:57)",
+                "diff": null
+              },
+              "uuid": "6b0043bf-1e37-46f4-8ffc-10acef450bf6",
+              "parentUUID": "7818bbf5-2db2-4df3-82d5-ad6f5dfe9676",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e1c85099-1d52-40ca-8e93-7d56393ef58d",
+            "7ed1e0ee-24b5-4225-a089-85b68c7dd485",
+            "f7687a20-b0cd-449c-a630-a3d40a1a3eec",
+            "c5d058c4-f189-46dc-ba7c-fe1784c8ae68"
+          ],
+          "failures": [
+            "18951ca8-dcd1-404a-80a6-e41039e73826",
+            "44ab61f8-b61f-4af7-b691-bc6e7858f3e1",
+            "9ec31dc5-b760-48f1-8aec-bd56da7d91af",
+            "58903828-c11a-4684-a93e-18bbf3a9fb83",
+            "995a4555-d9cf-43a1-b026-4bf0664019c5",
+            "2604d9e1-5c87-4178-a2b0-e756481b95b0",
+            "9d641bb6-f9bb-4f61-9bc1-b0351f4b20e3",
+            "6b0043bf-1e37-46f4-8ffc-10acef450bf6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 136312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "none",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "consoleReporter": "none",
+        "reportDir": "cypress/results",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
