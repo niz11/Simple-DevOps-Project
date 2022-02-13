@@ -9,7 +9,6 @@
     "test:chrome": "npm run test -- --browser chrome --headless",
     "mergeReports": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome-report/mochawesome.json",
     "generateHtml": "npm run mergeReports && npx marge mochawesome-report/mochawesome.json",
-    "test:docker": "./run-docker.sh",
     "test:visual": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:8.3.1 --browser chrome --spec 'cypress/integration/formlabs/visual/*'"
   },
   "author": "",
